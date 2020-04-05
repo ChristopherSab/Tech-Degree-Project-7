@@ -88,8 +88,22 @@ body {
     .main-header-search{
         flex-grow: 4;
         background-color: #DFE2F2;
-        padding: 0 1rem;
+        padding: .5rem 1rem;
         border-bottom-left-radius: 5px;
+    }
+
+    .alert-banner{
+        background-color:#7580BF;
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        margin: .5rem;
+        padding: 0 1rem;
+    }
+    .alert-banner-close {
+        margin-left: auto;
+        color: white;
+        font-weight: bolder;
     }
 
 
