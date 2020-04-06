@@ -21,28 +21,6 @@ alertBanner.addEventListener('click', e => {
 let trafficChart = document.getElementById("traffic-chart").getContext('2d');
 
 
-let trafficOptions = {
-    aspectRatio: 2.5,
-    lineTension: 0,
-    animation: {
-    duration: 0
-    },
-    scales: {
-    yAxes: [{
-    ticks: {
-    beginAtZero:true
-    }
-    }]
-    },
-    legend : {
-    display: false
-    }
-    };
-
-//Global Default Options
-//cityTrafficData.defaults.global.defaultFontFamily = 'Lato',
-
-
 let cityTrafficData = new Chart(trafficChart, {
     type: 'line', //types of chart could be: bar, horizontal bar, doughnut, pie, radar ...
 
@@ -52,17 +30,17 @@ let cityTrafficData = new Chart(trafficChart, {
 
         datasets: [{
             data: [
-                4551,
-                6853,
-                3955,
-                7843,
-                9556,
+                4500,
+                6000,
+                4000,
+                7000,
+                5500,
                 3003,
-                1923,
-                8641,
-                2993,
-                2527,
-                7299
+                1000,
+                7500,
+                2000,
+                3500,
+                6500
             ],
             
             lineTension: 0,
@@ -79,10 +57,92 @@ let cityTrafficData = new Chart(trafficChart, {
          
         legend: {
             display: false
-        }
+        },
 
+        scales: {
+            yAxes: [{
+                stacked: true
+            }]
+        }
     }
-    
+
+});
+
+// Daily Traffic Bar Chart
+
+let dailyTrafficData = document.getElementById("daily-chart").getContext('2d');
+
+
+let dailyChart = new Chart(dailyTrafficData, {
+    type: 'bar', //types of chart could be: bar, horizontal bar, doughnut, pie, radar ...
+
+    data: {
+        labels: ['M ', 'T', 'W', 'T', 'F', 'S', 'S'],
+
+        datasets: [{
+            data: [
+                455,
+                555,
+                350,
+                600,
+                755,
+                460,
+                192
+            ],
+            
+            backgroundColor: '#7580BF',
+            borderRadius: 5,
+           // pointBorderColor: '#7580BF',
+           // pointBorderWidth: 3,
+
+
+            
+        }]
+    },
+
+    options: {
+         
+        legend: {
+            display: false
+        },
+    }
+
+});
+
+// Mobile Users
+
+let mobileData = document.getElementById("doughnut-chart").getContext('2d');
+
+
+let mobileDataChart = new Chart(mobileData, {
+    type: 'doughnut', //types of chart could be: bar, horizontal bar, doughnut, pie, radar ...
+
+    data: {
+        labels: ['Phones', 'Tablets', 'Desktop'],
+
+        datasets: [{
+            data: [
+                10,
+                15,
+                75,
+            ],
+            
+            backgroundColor: ['#75B8BF', '#7EBF88', '#7580BF'],
+            borderRadius: 5,
+           // pointBorderColor: '#7580BF',
+           // pointBorderWidth: 3,
+
+
+            
+        }]
+    },
+
+    options: {
+         
+        legend: {
+            display: true
+        },
+    }
 
 });
 
