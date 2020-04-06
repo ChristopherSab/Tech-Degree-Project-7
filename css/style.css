@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Lora', serif;
+    color: darkgray;
 }
 
 .main-container {
@@ -88,12 +89,17 @@ body {
     .main-header-search{
         flex-grow: 4;
         background-color: #DFE2F2;
-        padding: .5rem 1rem;
+        padding: .5rem 0 .5rem 1rem;
         border-bottom-left-radius: 5px;
+    }
+
+    .main-header-search input {
+        border-radius: 2px;
     }
 
     .alert-banner{
         background-color:#7580BF;
+        color: white;
         display: flex;
         flex-direction: row;
         border-radius: 5px;
@@ -104,6 +110,32 @@ body {
         margin-left: auto;
         color: white;
         font-weight: bolder;
+        padding: .5rem;
+    }
+
+
+    .section-title {
+         text-align: center;
+         font-size: 1.2rem;
+     }
+    
+
+    .traffic-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .traffic-nav-link{
+        list-style: none;
+        padding: .5rem;
+        font-size:  1rem;
+        font-weight: bold;
+    }
+
+    .traffic-nav-link:hover {
+        background-color: #7EBF88;
+        border-radius: 20px;
+        color: white;
     }
 
 
