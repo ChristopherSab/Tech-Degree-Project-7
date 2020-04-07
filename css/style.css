@@ -114,13 +114,12 @@ body {
         padding: .5rem;
     }
 
-
     .section-title {
          text-align: center;
          font-size: 1.2rem;
+         color: #696969;
      }
     
-
     .traffic-nav {
         display: flex;
         flex-direction: row;
@@ -199,7 +198,10 @@ body {
     .member-details p {
         font-weight: bold;
         margin: 0 !important;
+        color: #696969;
     }
+
+
 
     .member-details p,
     .member-details a {
@@ -208,7 +210,47 @@ body {
 
     .date{
         margin-left: auto;
+        font-size: .7rem;
     }
+
+    .recent-activity{
+        margin: 0 .5rem;
+    }
+
+    .member-activity img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: .5rem;
+    }
+
+    .member-activity {
+        display: flex;
+        flex-direction: row;
+        color: #696969;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #F5F5F5;
+        padding: 0.5rem;
+    }
+
+    .activity-item {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .activity-time {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    .member-activity a {
+        margin-left: auto;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #7580BF;
+    }
+
+
 
 
 
