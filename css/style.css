@@ -201,11 +201,9 @@ body {
         color: #696969;
     }
 
-
-
     .member-details p,
     .member-details a {
-        font-size: 10px;
+        font-size: 0.7rem;
     }
 
     .date{
@@ -250,6 +248,31 @@ body {
         color: #7580BF;
     }
 
+   
+    .message-user{
+        margin: 0 1rem;
+    }
+
+
+    input[type=text], textarea {
+
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color:#F5F5F5;
+        width: 260px;
+        margin-bottom: 1rem;
+      }
+
+      button[type=submit] {
+        background-color: #7580BF;
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
 
 
 
