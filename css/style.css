@@ -5,6 +5,7 @@ body {
     color: darkgray;
 }
 
+
 .main-container {
     display: grid;
     grid-template-columns: 100%;
@@ -174,5 +175,41 @@ body {
         width: 33px;
         height: 33px;
     }
+
+    .members-section{
+        margin: 0 1rem;
+    }
+
+    .member {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .member img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: .5rem;
+    }
+
+    .member-details {
+        margin: .5rem;
+    }
+
+    .member-details p {
+        font-weight: bold;
+        margin: 0 !important;
+    }
+
+    .member-details p,
+    .member-details a {
+        font-size: 10px;
+    }
+
+    .date{
+        margin-left: auto;
+    }
+
+
 
 
