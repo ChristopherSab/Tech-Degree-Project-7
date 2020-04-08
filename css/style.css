@@ -8,7 +8,7 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
     "header"
@@ -30,6 +30,10 @@ body {
         border-radius: 50%;
         padding: 0 .5rem 0 .5rem;
     }
+
+    canvas {
+        max-width: 100%;
+      }
 
     h1 {
         font-weight: 500;
@@ -273,6 +277,16 @@ body {
         cursor: pointer;
         width: 100%;
       }
+
+      .settings {
+          margin: 2rem 1rem;
+          color: #696969;
+      }
+
+      
+  
+      
+
 
 
 
