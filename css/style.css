@@ -283,6 +283,41 @@ body {
           color: #696969;
       }
 
+      .form-field {
+          margin: 2rem 0 1rem 0;
+          width: 100%;
+          padding: .5rem;
+      }
+
+      .settings-buttons {
+          display: flex;
+          flex-direction: row;
+      } 
+
+      .button-primary {
+          flex-grow: 1;
+          margin-right: .5rem;
+          background-color: #7580BF;
+      }
+
+      .button-disabled {
+          flex-grow: 1;
+          
+      }
+
+      .button-primary,
+      .button-disabled {
+          height: 3rem;
+          border: none;
+          border-radius: 5px;
+          color: white;
+      }
+
+      /*** M e d i a  Queries ***/
+
+      
+
+
       
   
       
