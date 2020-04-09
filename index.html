@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebApp Dashboard</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/css-toggle-switch/dist/toggle-switch.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
 
 </head>
@@ -107,43 +107,45 @@
 
                 <h3 class="section-title">Social Stats</h3>
 
-                <div class="social-block">
+                <div class="social-block-container">
+                    <div class="social-block">
 
-                    <div class="social-svg">
-                        <img src="icons/icon-twitter.svg" alt="">
+                        <div class="social-svg">
+                            <img src="icons/icon-twitter.svg" alt="">
+                        </div>
+
+                        <div class="social-text">
+                            <h4 class="socical-name">Twitter</h4>
+                            <p>10,345</p>
+                        </div>
+
                     </div>
 
-                    <div class="social-text">
-                        <h4 class="socical-name">Twitter</h4>
-                        <p>10,345</p>
+                    <div class="social-block">
+
+                        <div class="social-svg">
+                            <img src="icons/icon-facebook.svg" alt="">
+                        </div>
+
+                        <div class="social-text">
+                            <h4 class="socical-name">Facebook</h4>
+                            <p>8,739</p>
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="social-block">
 
-                <div class="social-block">
+                        <div class="social-svg">
+                            <img src="icons/icon-google-plus.svg" alt="">
+                        </div>
 
-                    <div class="social-svg">
-                        <img src="icons/icon-facebook.svg" alt="">
+                        <div class="social-text">
+                            <h4 class="socical-name">Google+</h4>
+                            <p>2,530</p>
+                        </div>
+
                     </div>
-
-                    <div class="social-text">
-                        <h4 class="socical-name">Facebook</h4>
-                        <p>8,739</p>
-                    </div>
-
-                </div>
-
-                <div class="social-block">
-
-                    <div class="social-svg">
-                        <img src="icons/icon-google-plus.svg" alt="">
-                    </div>
-
-                    <div class="social-text">
-                        <h4 class="socical-name">Google+</h4>
-                        <p>2,530</p>
-                    </div>
-
                 </div>
             </section>
 
@@ -211,7 +213,7 @@
 
                     <div class="activity-details">
                         <p class="activity-item"><span>Victoria Chambers</span> commented on YourApp's SEO Tips</p>
-                        <p class= "activity-time">4 hours ago</p>
+                        <p class="activity-time">4 hours ago</p>
                     </div>
 
                     <a href="">&gt;</a>
@@ -224,7 +226,7 @@
 
                     <div class="activity-details">
                         <p class="activity-item"><span>Dale Byrd</span> likes the post Facebook's changes for 2016</p>
-                        <p class= "activity-time">5 hours ago</p>
+                        <p class="activity-time">5 hours ago</p>
                     </div>
 
                     <a href="">&gt;</a>
@@ -235,13 +237,13 @@
 
                     <img src="images/member-3.jpg" alt="">
 
-                    <div class="activity-details">   
+                    <div class="activity-details">
                         <p class="activity-item"><span>Dawn Wood</span> commented of Facebook's changes for 2016</p>
-                        <p class= "activity-time">5 hours ago</p>
-                    </div> 
+                        <p class="activity-time">5 hours ago</p>
+                    </div>
 
                     <a href="">&gt;</a>
-            
+
                 </div>
 
                 <div class="member-activity">
@@ -250,10 +252,10 @@
 
                     <div class="activity-details">
                         <p class="activity-item"><span>Dan Oliver</span> posted YourApp's SEO tips</p>
-                        <p class= "activity-time">1 day ago</p>
+                        <p class="activity-time">1 day ago</p>
                     </div>
 
-                    <a href="">&gt;</a> 
+                    <a href="">&gt;</a>
 
                 </div>
 
@@ -267,7 +269,7 @@
 
                     <input type="text" placeholder="Search for user" class="form-field" id="userField">
                     <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-                    <button type ="submit" class="button-primary" id="send" >Send</button>
+                    <button type="submit" class="button-primary" id="send">Send</button>
 
                 </form>
 
@@ -278,36 +280,36 @@
                 <h3 class="section-title">Settings</h3>
 
                 <div>
-                    <label class="switch-light switch-candy" onclick="">
+                    <label class="switch-light switch-ios" onclick="">
                         <input type="checkbox">
-                      
+
                         <strong>
                             Send Email Notifications
                         </strong>
-                      
-                        <span>
-                          <span>Off</span>
-                          <span>On</span>
-                          <a></a>
+
+                        <span class="on-Switch">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
                         </span>
-                      </label>
+                    </label>
                 </div>
 
                 <div>
 
-                    <label class="switch-light switch-candy" onclick="">
+                    <label class="switch-light switch-ios" onclick="">
                         <input type="checkbox">
-                      
+
                         <strong>
                             Set Profile to Public
                         </strong>
-                      
-                        <span>
-                          <span>Off</span>
-                          <span>On</span>
-                          <a></a>
+
+                        <span class="on-Switch">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
                         </span>
-                      </label>
+                    </label>
 
                 </div>
 
