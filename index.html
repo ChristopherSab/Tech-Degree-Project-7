@@ -25,30 +25,25 @@
                 <!-- SVG goes here -->
                 <img src="icons/icon-bell.svg" alt="">
 
-
-                <div class="notifications">
-
-                    <!-- Container area for notificatoins -->
-
-                </div>
-                <!-- Replace below with a different photo -->
+                <!-- Container area for notificatoins -->
+                <div class="notifications"></div>
 
             </div>
 
             <img src="images/chris_sabaoth_profile_pic.jpg" alt="">
 
-            <h3>Chris Sabaoth</h3>
+            <p class="user-name">Chris Sabaoth</p>
         </header>
 
         <navigation class="navigation">
 
-            <a href=""><img src="icons/icon-dashboard.svg" alt=""></a>
+            <a href=""><img class= "nav-img" src="icons/icon-dashboard.svg" alt=""></a>
 
-            <a href=""><img src="icons/icon-members.svg" alt=""></a>
+            <a href=""><img class= "nav-img" src="icons/icon-members.svg" alt=""></a>
 
-            <a href=""><img src="icons/icon-visits.svg" alt=""></a>
+            <a href=""><img class= "nav-img" src="icons/icon-visits.svg" alt=""></a>
 
-            <a href=""><img src="icons/icon-settings.svg" alt=""></a>
+            <a href=""><img class= "nav-img" src="icons/icon-settings.svg" alt=""></a>
 
         </navigation>
 
@@ -57,18 +52,18 @@
             <div class="main-header">
                 <h2 class="headline">Dashboard</h2>
                 <div class="main-header-search">
-                    <input type="search" placeholder="Search..." />
+                    <input class="search" type="search" placeholder="Search..." />
                 </div>
             </div>
 
-            <!-- alert banner -->
+            
             <div class="alert" id="alert">
-                <!-- JS will insert alert here -->
+                    <!-- Alert Banner JavaScript Code Will Insert Here -->
             </div>
-
+            
             <section class="traffic">
                 <div class="traffic-header">
-                    <h3 class="section-title">Traffic</h3>
+                    <h3 class="section-title">TRAFFIC</h3>
                     <ul class="traffic-nav">
                         <li class="traffic-nav-link">Hourly</li>
                         <li class="traffic-nav-link">Daily</li>
@@ -84,10 +79,9 @@
 
             <section class="daily-traffic">
 
-                <h3 class="section-title">Daily Traffic</h3>
+                <h3 class="section-title">DAILY TRAFFIC</h3>
 
                 <div class="widget-container-half">
-
                     <canvas id="daily-chart"></canvas>
                 </div>
 
@@ -95,7 +89,7 @@
 
             <section class="mobile-users">
 
-                <h3 class="section-title">Mobile Users</h3>
+                <h3 class="section-title">MOBILE USERS</h3>
 
                 <div class="widget-container-half">
 
@@ -105,7 +99,7 @@
 
             <section class="social-container">
 
-                <h3 class="section-title">Social Stats</h3>
+                <h3 class="section-title">SOCIAL STATS</h3>
 
                 <div class="social-block-container">
                     <div class="social-block">
@@ -149,188 +143,194 @@
                 </div>
             </section>
 
-            <section class="members-section">
+            <div class="user-section">
 
-                <h3 class="section-title">New Members</h3>
+                <section class="members-section">
 
-                <div class="member">
+                    <h3 class="section-title">NEW MEMBERS</h3>
 
-                    <img src="images/member-1.jpg" alt="">
+                    <div class="member">
 
-                    <div class="member-details">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers80@example.com</a>
+                        <img src="images/member-1.jpg" alt="">
+
+                        <div class="member-details">
+                            <p>Victoria Chambers</p>
+                            <a href="#">victoria.chambers80@example.com</a>
+                        </div>
+
+                        <p class="date">10/15/15</p>
                     </div>
 
-                    <p class="date">10/15/15</p>
-                </div>
+                    <div class="member">
 
-                <div class="member">
+                        <img src="images/member-2.jpg" alt="">
 
-                    <img src="images/member-2.jpg" alt="">
+                        <div class="member-details">
+                            <p>Dale Byrd</p>
+                            <a href="#">dale.byrd52@example.com</a>
+                        </div>
 
-                    <div class="member-details">
-                        <p>Dale Byrd</p>
-                        <a href="#">dale.byrd52@example.com</a>
+                        <p class="date">10/15/15</p>
                     </div>
 
-                    <p class="date">10/15/15</p>
-                </div>
+                    <div class="member">
 
-                <div class="member">
+                        <img src="images/member-3.jpg" alt="">
 
-                    <img src="images/member-3.jpg" alt="">
+                        <div class="member-details">
+                            <p>Dawn Wood</p>
+                            <a href="">dawn.wood16@example.com</a>
+                        </div>
 
-                    <div class="member-details">
-                        <p>Dawn Wood</p>
-                        <a href="">dawn.wood16@example.com</a>
+                        <p class="date">10/15/15</p>
                     </div>
 
-                    <p class="date">10/15/15</p>
-                </div>
+                    <div class="member">
 
-                <div class="member">
+                        <img src="images/member-4.jpg" alt="">
 
-                    <img src="images/member-4.jpg" alt="">
+                        <div class="member-details">
+                            <p>Dan Oliver</p>
+                            <a href="">dan.oliver82@example.com</a>
+                        </div>
 
-                    <div class="member-details">
-                        <p>Dan Oliver</p>
-                        <a href="">dan.oliver82@example.com</a>
+                        <p class="date">10/15/15</p>
                     </div>
 
-                    <p class="date">10/15/15</p>
-                </div>
+                </section>
 
-            </section>
+                <section class="activity">
 
-            <section class="recent-activity">
+                    <h3 class="section-title">RECENT ACTIVITY</h3>
 
-                <h3 class="section-title">Recent Activity</h3>
+                    <div class="member-activity">
 
-                <div class="member-activity">
+                        <img src="images/member-1.jpg" alt="">
 
-                    <img src="images/member-1.jpg" alt="">
+                        <div class="activity-details">
+                            <p class="activity-item"><span>Victoria Chambers</span> commented on YourApp's SEO Tips</p>
+                            <p class="activity-time">4 hours ago</p>
+                        </div>
 
-                    <div class="activity-details">
-                        <p class="activity-item"><span>Victoria Chambers</span> commented on YourApp's SEO Tips</p>
-                        <p class="activity-time">4 hours ago</p>
+                        <a href="">&gt;</a>
+
                     </div>
 
-                    <a href="">&gt;</a>
+                    <div class="member-activity">
 
-                </div>
+                        <img src="images/member-2.jpg" alt="">
 
-                <div class="member-activity">
+                        <div class="activity-details">
+                            <p class="activity-item"><span>Dale Byrd</span> likes the post Facebook's changes for 2016
+                            </p>
+                            <p class="activity-time">5 hours ago</p>
+                        </div>
 
-                    <img src="images/member-2.jpg" alt="">
+                        <a href="">&gt;</a>
 
-                    <div class="activity-details">
-                        <p class="activity-item"><span>Dale Byrd</span> likes the post Facebook's changes for 2016</p>
-                        <p class="activity-time">5 hours ago</p>
                     </div>
 
-                    <a href="">&gt;</a>
+                    <div class="member-activity">
 
-                </div>
+                        <img src="images/member-3.jpg" alt="">
 
-                <div class="member-activity">
+                        <div class="activity-details">
+                            <p class="activity-item"><span>Dawn Wood</span> commented of Facebook's changes for 2016</p>
+                            <p class="activity-time">5 hours ago</p>
+                        </div>
 
-                    <img src="images/member-3.jpg" alt="">
+                        <a href="">&gt;</a>
 
-                    <div class="activity-details">
-                        <p class="activity-item"><span>Dawn Wood</span> commented of Facebook's changes for 2016</p>
-                        <p class="activity-time">5 hours ago</p>
                     </div>
 
-                    <a href="">&gt;</a>
+                    <div class="member-activity">
 
-                </div>
+                        <img src="images/member-4.jpg" alt="">
 
-                <div class="member-activity">
+                        <div class="activity-details">
+                            <p class="activity-item"><span>Dan Oliver</span> posted YourApp's SEO tips</p>
+                            <p class="activity-time">1 day ago</p>
+                        </div>
 
-                    <img src="images/member-4.jpg" alt="">
+                        <a href="">&gt;</a>
 
-                    <div class="activity-details">
-                        <p class="activity-item"><span>Dan Oliver</span> posted YourApp's SEO tips</p>
-                        <p class="activity-time">1 day ago</p>
                     </div>
 
-                    <a href="">&gt;</a>
+                </section>
+            </div>
 
-                </div>
 
-            </section>
+                <section class="message-user">
 
-            <section class="message-user">
+                    <h3 class="section-title">MESSAGE USER</h3>
 
-                <h3 class="section-title">Message User</h3>
+                    <form action="">
 
-                <form action="">
+                        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                        <button type="submit" class="button-primary" id="send">Send</button>
 
-                    <input type="text" placeholder="Search for user" class="form-field" id="userField">
-                    <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-                    <button type="submit" class="button-primary" id="send">Send</button>
+                    </form>
 
-                </form>
+                </section>
 
-            </section>
+                <section class="settings">
 
-            <section class="settings">
+                    <h3 class="section-title">SETTINGS</h3>
 
-                <h3 class="section-title">Settings</h3>
+                    <div>
+                        <label class="switch-light switch-ios" onclick="">
+                            <input type="checkbox">
 
-                <div>
-                    <label class="switch-light switch-ios" onclick="">
-                        <input type="checkbox">
+                            <strong>
+                                Send Email Notifications
+                            </strong>
 
-                        <strong>
-                            Send Email Notifications
-                        </strong>
+                            <span class="on-Switch">
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
 
-                        <span class="on-Switch">
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                        </span>
-                    </label>
-                </div>
+                    <div>
 
-                <div>
+                        <label class="switch-light switch-ios" onclick="">
+                            <input type="checkbox">
 
-                    <label class="switch-light switch-ios" onclick="">
-                        <input type="checkbox">
+                            <strong>
+                                Set Profile to Public
+                            </strong>
 
-                        <strong>
-                            Set Profile to Public
-                        </strong>
+                            <span class="on-Switch">
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
 
-                        <span class="on-Switch">
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                        </span>
-                    </label>
+                    </div>
 
-                </div>
+                    <select class="form-field" id="timezone">
+                        <option disabled selected>Select a Timezone</option>
+                        <option>Eastern</option>
+                        <option>Central Africa Time</option>
+                        <option>Brasília Time</option>
+                        <option>China Standard Time</option>
+                        <option>Israel Daylight Time</option>
+                    </select>
 
-                <select class="form-field" id="timezone">
-                    <option disabled selected>Select a Timezone</option>
-                    <option>Eastern</option>
-                    <option>Central Africa Time</option>
-                    <option>Brasília Time</option>
-                    <option>China Standard Time</option>
-                    <option>Israel Daylight Time</option>
-                </select>
+                    <div class="settings-buttons">
 
-                <div class="settings-buttons">
+                        <button id="save" class="button-primary">Save</button>
 
-                    <button id="save" class="button-primary">Save</button>
+                        <button id="cancel" class="button-disabled">Cancel</button>
 
-                    <button id="cancel" class="button-disabled">Cancel</button>
+                    </div>
 
-                </div>
-
-            </section>
+                </section>
+            
 
         </main>
     </div>
