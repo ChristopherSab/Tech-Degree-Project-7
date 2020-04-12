@@ -37,20 +37,20 @@
 
         <navigation class="navigation">
 
-            <a href=""><img class="nav-img" src="icons/icon-dashboard.svg" alt=""></a>
+            <a href="#headline"><img class="nav-img" src="icons/icon-dashboard.svg" alt=""></a>
 
-            <a href=""><img class="nav-img" src="icons/icon-members.svg" alt=""></a>
+            <a href="#members"><img class="nav-img" src="icons/icon-members.svg" alt=""></a>
 
-            <a href=""><img class="nav-img" src="icons/icon-visits.svg" alt=""></a>
+            <a href="#daily-visits"><img class="nav-img" src="icons/icon-visits.svg" alt=""></a>
 
-            <a href=""><img class="nav-img" src="icons/icon-settings.svg" alt=""></a>
+            <a href="#settings"><img class="nav-img" src="icons/icon-settings.svg" alt=""></a>
 
         </navigation>
 
         <main class="main">
 
             <div class="main-header">
-                <h2 class="headline">Dashboard</h2>
+                <h2 class="headline" id="headline">Dashboard</h2>
                 <div class="main-header-search">
                     <input class="search" type="search" placeholder="Search..." />
                 </div>
@@ -78,7 +78,7 @@
             </section>
 
             <!-- Bar Graph -->
-            <section class="daily-traffic">
+            <section class="daily-traffic" id="daily-visits">
 
                 <h3 class="section-title">DAILY TRAFFIC</h3>
 
@@ -147,128 +147,125 @@
                 </div>
             </section>
 
-            <div class="user-section">
+            <section class="members-section" id="members">
 
-                <section class="members-section">
+                <h3 class="section-title">NEW MEMBERS</h3>
 
-                    <h3 class="section-title">NEW MEMBERS</h3>
+                <div class="member">
 
-                    <div class="member">
+                    <img class="user-img" src="images/member-1.jpg" alt="">
 
-                        <img src="images/member-1.jpg" alt="">
-
-                        <div class="member-details">
-                            <p>Victoria Chambers</p>
-                            <a href="#">victoria.chambers80@example.com</a>
-                        </div>
-
-                        <p class="date">10/15/15</p>
+                    <div class="member-details">
+                        <p>Victoria Chambers</p>
+                        <a href="#">victoria.chambers80@example.com</a>
                     </div>
 
-                    <div class="member">
+                    <p class="date">10/15/15</p>
+                </div>
 
-                        <img src="images/member-2.jpg" alt="">
+                <div class="member">
 
-                        <div class="member-details">
-                            <p>Dale Byrd</p>
-                            <a href="#">dale.byrd52@example.com</a>
-                        </div>
+                    <img class="user-img" src="images/member-2.jpg" alt="">
 
-                        <p class="date">10/15/15</p>
+                    <div class="member-details">
+                        <p>Dale Byrd</p>
+                        <a href="#">dale.byrd52@example.com</a>
                     </div>
 
-                    <div class="member">
+                    <p class="date">10/15/15</p>
+                </div>
 
-                        <img src="images/member-3.jpg" alt="">
+                <div class="member">
 
-                        <div class="member-details">
-                            <p>Dawn Wood</p>
-                            <a href="">dawn.wood16@example.com</a>
-                        </div>
+                    <img class="user-img" src="images/member-3.jpg" alt="">
 
-                        <p class="date">10/15/15</p>
+                    <div class="member-details">
+                        <p>Dawn Wood</p>
+                        <a href="">dawn.wood16@example.com</a>
                     </div>
 
-                    <div class="member">
+                    <p class="date">10/15/15</p>
+                </div>
 
-                        <img src="images/member-4.jpg" alt="">
+                <div class="member">
 
-                        <div class="member-details">
-                            <p>Dan Oliver</p>
-                            <a href="">dan.oliver82@example.com</a>
-                        </div>
+                    <img class="user-img" src="images/member-4.jpg" alt="">
 
-                        <p class="date">10/15/15</p>
+                    <div class="member-details">
+                        <p>Dan Oliver</p>
+                        <a href="">dan.oliver82@example.com</a>
                     </div>
 
-                </section>
+                    <p class="date">10/15/15</p>
+                </div>
 
-                <section class="activity">
+            </section>
 
-                    <h3 class="section-title">RECENT ACTIVITY</h3>
+            <section class="activity">
 
-                    <div class="member-activity">
+                <h3 class="section-title">RECENT ACTIVITY</h3>
 
-                        <img src="images/member-1.jpg" alt="">
+                <div class="member-activity">
 
-                        <div class="activity-details">
-                            <p class="activity-item"><span>Victoria Chambers</span> commented on YourApp's SEO Tips</p>
-                            <p class="activity-time">4 hours ago</p>
-                        </div>
+                    <img class="user-img" src="images/member-1.jpg" alt="">
 
-                        <a href="">&gt;</a>
-
+                    <div class="activity-details">
+                        <p class="activity-item"><span>Victoria Chambers</span> commented on YourApp's SEO Tips</p>
+                        <p class="activity-time">4 hours ago</p>
                     </div>
 
-                    <div class="member-activity">
+                    <a href="#">&gt;</a>
 
-                        <img src="images/member-2.jpg" alt="">
+                </div>
 
-                        <div class="activity-details">
-                            <p class="activity-item"><span>Dale Byrd</span> likes the post Facebook's changes for 2016
-                            </p>
-                            <p class="activity-time">5 hours ago</p>
-                        </div>
+                <div class="member-activity">
 
-                        <a href="">&gt;</a>
+                    <img class="user-img" src="images/member-2.jpg" alt="">
 
+                    <div class="activity-details">
+                        <p class="activity-item"><span>Dale Byrd</span> likes the post Facebook's changes for 2016
+                        </p>
+                        <p class="activity-time">5 hours ago</p>
                     </div>
 
-                    <div class="member-activity">
+                    <a href="#">&gt;</a>
 
-                        <img src="images/member-3.jpg" alt="">
+                </div>
 
-                        <div class="activity-details">
-                            <p class="activity-item"><span>Dawn Wood</span> commented of Facebook's changes for 2016</p>
-                            <p class="activity-time">5 hours ago</p>
-                        </div>
+                <div class="member-activity">
 
-                        <a href="">&gt;</a>
+                    <img class="user-img" src="images/member-3.jpg" alt="">
 
+                    <div class="activity-details">
+                        <p class="activity-item"><span>Dawn Wood</span> commented of Facebook's changes for 2016</p>
+                        <p class="activity-time">5 hours ago</p>
                     </div>
 
-                    <div class="member-activity">
+                    <a href="#">&gt;</a>
 
-                        <img src="images/member-4.jpg" alt="">
+                </div>
 
-                        <div class="activity-details">
-                            <p class="activity-item"><span>Dan Oliver</span> posted YourApp's SEO tips</p>
-                            <p class="activity-time">1 day ago</p>
-                        </div>
+                <div class="member-activity">
 
-                        <a href="">&gt;</a>
+                    <img class="user-img" src="images/member-4.jpg" alt="">
 
+                    <div class="activity-details">
+                        <p class="activity-item"><span>Dan Oliver</span> posted YourApp's SEO tips</p>
+                        <p class="activity-time">1 day ago</p>
                     </div>
 
-                </section>
-            </div>
+                    <a href="#">&gt;</a>
 
+                </div>
 
-            <section class="message-user">
+            </section>
+
+            <!-- Messaging Widget -->
+            <section class="message">
 
                 <h3 class="section-title">MESSAGE USER</h3>
 
-                <form action="">
+                <form class="message-container" action="">
 
                     <input type="text" placeholder="Search for user" class="form-field" id="userField">
                     <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
@@ -278,11 +275,13 @@
 
             </section>
 
-            <section class="settings">
+            <!-- Local Settings Widget -->
+            <section class="settings" id="settings">
 
                 <h3 class="section-title">SETTINGS</h3>
 
                 <div>
+                    <!-- Custom CSS Toggle Code Below-->
                     <label class="switch-light switch-ios" onclick="">
                         <input type="checkbox">
 
@@ -316,13 +315,49 @@
 
                 </div>
 
+                <!-- Select Timezone Option Below -->
                 <select class="form-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
-                    <option>Eastern</option>
-                    <option>Central Africa Time</option>
-                    <option>Brasília Time</option>
-                    <option>China Standard Time</option>
-                    <option>Israel Daylight Time</option>
+                    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                    <option value="-10:00">(GMT -10:00) Hawaii</option>
+                    <option value="-09:50">(GMT -9:30) Taiohae</option>
+                    <option value="-09:00">(GMT -9:00) Alaska</option>
+                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                    <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                    <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                    <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                    <option value="-04:50">(GMT -4:30) Caracas</option>
+                    <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                    <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                    <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                    <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                    <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                    <option value="+00:00" selected="selected">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                    <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                    <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                    <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                    <option value="+03:50">(GMT +3:30) Tehran</option>
+                    <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                    <option value="+04:50">(GMT +4:30) Kabul</option>
+                    <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                    <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                    <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                    <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                    <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                    <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                    <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                    <option value="+08:75">(GMT +8:45) Eucla</option>
+                    <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                    <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                    <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                    <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                    <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                    <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                    <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                    <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                    <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                    <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
                 </select>
 
                 <div class="settings-buttons">
