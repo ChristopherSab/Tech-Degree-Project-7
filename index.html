@@ -16,27 +16,31 @@
 <body>
     <div class="main-container">
 
+        <!------------------------->
         <!-- MAIN HEADER SECTION -->
+        <!------------------------->
         <header class="header">
 
-            <h1><span>Web</span>App&trade;</h1>
+            <h1 class="app-name"><span>Web</span>App&trade;</h1>
 
             <div class="bell-container">
 
                 <!-- SVG goes here -->
-                <img src="icons/icon-bell.svg" alt="">
+                <img class="bell-icon" src="icons/icon-bell.svg" alt="">
 
                 <!-- Container area for notificatoins -->
                 <div class="notifications"></div>
 
             </div>
 
-            <img src="images/chris_sabaoth_profile_pic.jpg" alt="">
+            <img class="main-login-profile" src="images/chris_sabaoth_profile_pic.jpg" alt="">
 
             <p class="user-name">Chris Sabaoth</p>
         </header>
 
+        <!----------------------------->
         <!-- MAIN NAVIGATION SECTION -->
+        <!----------------------------->
         <navigation class="navigation">
 
             <a href="#headline"><img class="nav-img" src="icons/icon-dashboard.svg" alt=""></a>
@@ -51,10 +55,10 @@
 
         <main class="main">
 
-            <div class="main-header">
+            <div class="main-headline">
                 <h2 class="headline" id="headline">Dashboard</h2>
-                <div class="main-header-search">
-                    <input class="search" type="search" placeholder="Search..." />
+                <div class="headline-search-box">
+                    <input class="search" type="search" placeholder="  Search" />
                 </div>
             </div>
 
@@ -102,7 +106,9 @@
                 </div>
             </section>
 
+            <!--------------------->
             <!-- SOCIALS SECTION -->
+            <!--------------------->
             <section class="social">
 
                 <h3 class="section-title">SOCIAL STATS</h3>
@@ -111,8 +117,8 @@
 
                     <div class="social-box">
 
-                        <div class="social-svg">
-                            <img src="icons/icon-twitter.svg" alt="">
+                        <div class="social-icon-container">
+                            <img class="social-icon" src="icons/icon-twitter.svg" alt="">
                         </div>
 
                         <div class="social-text">
@@ -124,8 +130,8 @@
 
                     <div class="social-box">
 
-                        <div class="social-svg">
-                            <img src="icons/icon-facebook.svg" alt="">
+                        <div class="social-icon-container">
+                            <img class="social-icon" src="icons/icon-facebook.svg" alt="">
                         </div>
 
                         <div class="social-text">
@@ -137,8 +143,8 @@
 
                     <div class="social-box">
 
-                        <div class="social-svg">
-                            <img src="icons/icon-google-plus.svg" alt="">
+                        <div class="social-icon-container">
+                            <img class="social-icon" src="icons/icon-google-plus.svg" alt="">
                         </div>
 
                         <div class="social-text">
@@ -149,14 +155,15 @@
                     </div>
                 </div>
             </section>
-
+            <!----------------------------->
             <!-- MEMBER ACTIVITY SECTION -->
+            <!----------------------------->
 
             <section class="members-section" id="members">
 
                 <h3 class="section-title">NEW MEMBERS</h3>
 
-                <div class="member">
+                <div class="member-box">
 
                     <img class="user-img" src="images/member-1.jpg" alt="">
 
@@ -168,7 +175,7 @@
                     <p class="date">10/15/15</p>
                 </div>
 
-                <div class="member">
+                <div class="member-box">
 
                     <img class="user-img" src="images/member-2.jpg" alt="">
 
@@ -180,7 +187,7 @@
                     <p class="date">10/15/15</p>
                 </div>
 
-                <div class="member">
+                <div class="member-box">
 
                     <img class="user-img" src="images/member-3.jpg" alt="">
 
@@ -192,7 +199,7 @@
                     <p class="date">10/15/15</p>
                 </div>
 
-                <div class="member">
+                <div class="member-box">
 
                     <img class="user-img" src="images/member-4.jpg" alt="">
 
@@ -265,7 +272,9 @@
 
             </section>
 
+            <!------------------------------>
             <!-- MESSAGING WIDGET SECTION -->
+            <!------------------------------>
             <section class="message">
 
                 <h3 class="section-title">MESSAGE USER</h3>
@@ -280,7 +289,9 @@
 
             </section>
 
+            <!----------------------------------->
             <!-- LOCAL SETTINGS WIDGET SECTION -->
+            <!----------------------------------->
             <section class="settings" id="settings">
 
                 <h3 class="section-title">SETTINGS</h3>
@@ -321,7 +332,7 @@
                 </div>
 
                 <!-- Select Timezone Option Below -->
-                <select class="form-field" id="timezone">
+                <select class="timezone-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
                     <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                     <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>

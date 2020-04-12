@@ -1,10 +1,28 @@
-/*Styles*/
+/*------------*/
+/* Base Styles*/
+/*------------*/
+
+:root {
+    --color-primary: #7580BF;
+    --color-secondary:#4D4F73;
+    --color-tertiary:#DFE2F2;
+
+    --color-border-main: #696969;
+    --color-border-secondary: #F5F5F5;
+}
 
 body {
     font-family: 'Lora', serif;
     color: darkgray;
 }
 
+html {
+    font-size: 1rem;
+}
+
+/*------------*/
+/* Grid Styles*/
+/*------------*/
 
 .main-container {
     display: grid;
@@ -17,93 +35,153 @@ body {
     }
     .header {
     grid-area: header;
-    background-color: #7580BF;
+    background-color: var(--color-primary);
     color: white;
     display: flex;
     flex-direction: row;
-    padding: .5rem;
+    padding: .5rem 1.5rem;
     }
 
-    .header img {
+    .navigation {
+        grid-area: navigation;
+        background-color: var(--color-secondary);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .main {
+        grid-area: main;
+        }
+
+    /*------------*/
+    /* Chart Styles*/
+    /*------------*/
+    canvas {
+        max-width: 100%;
+      }
+
+    /*------------*/
+    /* Text Styles*/
+    /*------------*/
+
+    .app-name {
+        font-weight: 500;
+        font-size: medium;
+        margin-right: auto;
+    }
+
+    .app-name span {
+        font-weight: 900;
+    }
+
+    .user-name {
+        font-size: 0.7rem;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--color-secondary);
+    }
+
+    .social-num-stat {
+        font-size: 2rem;
+        color: var(--color-secondary);
+    }
+
+    .socical-name {
+        color: var(--color-primary);
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .member-details p {
+        font-weight: bold;
+        margin: 0;
+        color: #696969;
+    }
+
+    .member-details p,
+    .member-details a {
+        font-size: 0.7rem;
+    }
+
+    /*-----------------*/
+    /* Main Image Styles*/
+    /*-----------------*/
+    .main-login-profile {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         padding: 0 .5rem 0 .5rem;
     }
 
-    canvas {
-        max-width: 100%;
-      }
-
-    h1 {
-        font-weight: 500;
-        font-size: medium;
-        margin-right: auto;
-    }
-
-    h1 span {
-        font-weight: 900;
-    }
-
-    h3 {
-        font-size: small;
-        font-weight: lighter;
-    }
-    .navigation {
-    grid-area: navigation;
-    background-color: #4D4F73;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .navigation a img {
+    .nav-img {
         width: 30px;
         padding: .5rem 1rem;
     }
 
-    .bell-container{
-        border-right: 1px solid #4D4F73;
-    }
-
-    .bell-container img {
+    .bell-icon {
         width: 20px;
-        padding-right: 1rem;
+        margin-top: .5rem;
+        padding-right: 1rem; 
     }
 
-    a img {
-        width: 100px;
+    .social-icon {
+        width: 33px;
+        height: 33px;
     }
 
-    .main {
-    grid-area: main;
+    .user-img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: .5rem;
     }
 
-    .main-header {
+    
+    /*-------------------*/
+    /* Main Header Styles*/
+    /*-------------------*/
+
+    .bell-container{
+        border-right: 1px solid var(--color-secondary);
+    }
+
+    /*----------------*/
+    /* Headline Styles*/
+    /*----------------*/
+
+    .main-headline {
         display: flex;
         flex-direction: row;
     }
 
-    .headline{
-        font-size: medium;
+    .headline {
         flex-grow: 1;
         padding: 0 1rem;
     }
 
-    .main-header-search{
+    .headline-search-box{
         flex-grow: 4;
         background-color: #DFE2F2;
         padding: .5rem 0 .5rem 1rem;
         border-bottom-left-radius: 5px;
     }
 
-    .main-header-search input {
-        border-radius: 1px;
+    .search {
+        border-radius: 7px;
+        padding-right: 10rem;
     }
 
+    /*----------------*/
+    /* Alert Banner   */
+    /*----------------*/
+
     .alert-banner{
-        background-color:#7580BF;
+        background-color: var(--color-primary);
         color: white;
         display: flex;
         flex-direction: row;
@@ -118,11 +196,9 @@ body {
         padding: .5rem;
     }
 
-    .section-title {
-         text-align: center;
-         font-size: 1.2rem;
-         color: #696969;
-     }
+    /*-------------------*/
+    /*  Traffic Section  */
+    /*-------------------*/
     
     .traffic-nav {
         display: flex;
@@ -143,72 +219,58 @@ body {
         color: white;
     }
 
+    /*-------------------*/
+    /*  Social Section   */
+    /*-------------------*/
     .social{
-        margin: 0 1rem;
+        margin: 1rem;
     }
 
     .social-box{
         border: 1px solid darkgray;
-        background-color: #F5F5F5;
-        padding: 0 .5rem;
-        margin-bottom: .5rem;
+        background-color: var(--color-tertiary);
+        padding: 1rem;
+        margin-bottom: 1rem;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
     }
-    .social-text > p {
-        font-size: 2rem;
-        color: 	#696969;
-    }
-
-    .socical-name {
-        color:#7580BF;
-        font-weight: bold;
-        font-size: 1rem;
-    }
-
-    .social-svg {
-        background-color: #7580BF;
+    
+    .social-icon-container {
+        background-color: var(--color-primary);
         width: 35px;
         height: 35px;
         padding: .5rem;
         border-radius: 50%;
-        margin: 2.5rem 2.5rem 0 0 ;
+        margin: 2.5rem 2.5rem 0 0;
     }
 
-    .social-svg img {
-        width: 33px;
-        height: 33px;
+    .socical-name {
+        font-weight: bold;
+        font-size: 1rem;
     }
+
+    .social-num-stat {
+        font-size: 2rem;
+    }
+
+    /*------------------*/
+    /*  Member  Section*/
+    /*-----------------*/
 
     .members-section{
         margin: 0 1rem;
     }
 
-    .member {
+    .member-box {
         display: flex;
         flex-direction: row;
     }
 
-    .member img {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        margin-top: .5rem;
-    }
-
     .member-details {
         margin: .5rem;
-    }
-
-    .member-details p {
-        font-weight: bold;
-        margin: 0 !important;
-        color: #696969;
-    }
-
-    .member-details p,
-    .member-details a {
-        font-size: 0.7rem;
     }
 
     .date{
@@ -216,16 +278,14 @@ body {
         font-size: .7rem;
     }
 
+    /*-------------------*/
+    /*  Activity Section*/
+    /*-----------------*/
+
     .activity{
         margin: 0 .5rem;
     }
 
-    .member-activity img {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        margin-right: .5rem;
-    }
 
     .member-activity {
         display: flex;
@@ -253,20 +313,28 @@ body {
         color: #7580BF;
     }
 
+    /*-------------------*/
+    /*  Message Widget  */
+    /*-----------------*/
+
+    .message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
    
     .message{
         margin: 0 1rem;
     }
 
-
     input[type=text], textarea {
 
         padding: 12px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-border-main);
         border-radius: 4px;
-        background-color:#F5F5F5;
-        width: 260px;
-        margin-bottom: 1rem;
+        background-color: var(--color-tertiary);
+        width: 450px;
+        margin-bottom: 1.3rem;
 
       }
 
@@ -280,15 +348,12 @@ body {
         width: 100%;
       }
 
+    /*-------------------*/
+    /*  Settings Widget  */
+    /*------------------*/
+
       .settings {
           margin: 2rem 1rem;
-          color: #696969;
-      }
-
-      .form-field {
-          margin: 2rem 0 1rem 0;
-          width: 100%;
-          padding: .5rem;
       }
 
       .settings-buttons {
@@ -299,12 +364,12 @@ body {
       .button-primary {
           flex-grow: 1;
           margin-right: .5rem;
-          background-color: #7580BF;
+          background-color: var(--color-primary);
       }
 
       .button-disabled {
           flex-grow: 1;
-          
+          background-color: darkgray;  
       }
 
       .button-primary,
@@ -319,7 +384,9 @@ body {
           margin-bottom: 2rem;
       }
 
-   
+      .timezone-field {
+        margin: 2rem 0;
+      }
 
       /*** M e d i a  Queries ***/
 
@@ -327,7 +394,7 @@ body {
 
         .main-container {
             display: grid;
-            grid-template-columns: 1fr 14fr;
+            grid-template-columns: 75px 1fr;
             grid-template-rows: repeat(autofit, minmax(100px, 1fr));
             grid-template-areas:
             "header header"
@@ -335,12 +402,12 @@ body {
             "navigation main";
             }
 
-            .main-header-search {
+            .headline-search-box {
                 display: flex;
                 flex-direction: row;
             }
 
-            .main-header-search input {
+            .search {
                 width: 30vw;
                 margin-left: auto;
                 margin-right: 1rem;
@@ -494,7 +561,7 @@ body {
             margin-top: 0;
         }
     
-        .social-svg {
+        .social-icon-container {
             width: 50px;
             height: 50px;
             padding: 1rem;
@@ -502,7 +569,7 @@ body {
             margin: 2rem 2rem 0 0 ;
         }
     
-        .social-svg img {
+        .social-icon-container img {
             width: 45px;
             height: 45px;
         }

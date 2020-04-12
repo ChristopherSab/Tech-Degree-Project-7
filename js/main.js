@@ -129,8 +129,7 @@ let mobileDataChart = new Chart(mobileData, {
             
             backgroundColor: ['#75B8BF', '#7EBF88', '#7580BF'],
             borderRadius: 5,
-           // pointBorderColor: '#7580BF',
-           // pointBorderWidth: 3,
+
             
         }]
     },
@@ -138,13 +137,13 @@ let mobileDataChart = new Chart(mobileData, {
     options: {
          
         legend: {
-            display: true
-        },
-
-        labels: {
-            boxWidth: 20,
-            fontStyle: 'bold'
-            }            
+            display: true,
+            position: 'right',
+            labels: {
+                boxWidth: 25,
+                fontStyle: 'bold'
+                } 
+        },    
 
     }
 
