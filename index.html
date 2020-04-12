@@ -37,13 +37,13 @@
 
         <navigation class="navigation">
 
-            <a href=""><img class= "nav-img" src="icons/icon-dashboard.svg" alt=""></a>
+            <a href=""><img class="nav-img" src="icons/icon-dashboard.svg" alt=""></a>
 
-            <a href=""><img class= "nav-img" src="icons/icon-members.svg" alt=""></a>
+            <a href=""><img class="nav-img" src="icons/icon-members.svg" alt=""></a>
 
-            <a href=""><img class= "nav-img" src="icons/icon-visits.svg" alt=""></a>
+            <a href=""><img class="nav-img" src="icons/icon-visits.svg" alt=""></a>
 
-            <a href=""><img class= "nav-img" src="icons/icon-settings.svg" alt=""></a>
+            <a href=""><img class="nav-img" src="icons/icon-settings.svg" alt=""></a>
 
         </navigation>
 
@@ -56,11 +56,11 @@
                 </div>
             </div>
 
-            
+
             <div class="alert" id="alert">
-                    <!-- Alert Banner JavaScript Code Will Insert Here -->
+                <!-- Alert Banner JavaScript Code Will Insert Here -->
             </div>
-            
+
             <section class="traffic">
                 <div class="traffic-header">
                     <h3 class="section-title">TRAFFIC</h3>
@@ -77,66 +77,70 @@
                 </div>
             </section>
 
+            <!-- Bar Graph -->
             <section class="daily-traffic">
 
                 <h3 class="section-title">DAILY TRAFFIC</h3>
 
                 <div class="widget-container-half">
+                    <!-- Element Bar Graph Will Attach Below -->
                     <canvas id="daily-chart"></canvas>
                 </div>
 
             </section>
 
+            <!-- Dougnut Chart -->
             <section class="mobile-users">
 
                 <h3 class="section-title">MOBILE USERS</h3>
 
                 <div class="widget-container-half">
-
+                    <!-- Element Dougnut Chart Will Attach Below -->
                     <canvas id="doughnut-chart"></canvas>
                 </div>
             </section>
 
-            <section class="social-container">
+            <section class="social">
 
                 <h3 class="section-title">SOCIAL STATS</h3>
 
-                <div class="social-block-container">
-                    <div class="social-block">
+                <div class="socials-container">
+
+                    <div class="social-box">
 
                         <div class="social-svg">
                             <img src="icons/icon-twitter.svg" alt="">
                         </div>
 
                         <div class="social-text">
-                            <h4 class="socical-name">Twitter</h4>
-                            <p>10,345</p>
+                            <p class="socical-name">Twitter</p>
+                            <p class="social-num-stat">10,345</p>
                         </div>
 
                     </div>
 
-                    <div class="social-block">
+                    <div class="social-box">
 
                         <div class="social-svg">
                             <img src="icons/icon-facebook.svg" alt="">
                         </div>
 
                         <div class="social-text">
-                            <h4 class="socical-name">Facebook</h4>
-                            <p>8,739</p>
+                            <p class="socical-name">Facebook</p>
+                            <p class="social-num-stat"> 8,739 </p>
                         </div>
 
                     </div>
 
-                    <div class="social-block">
+                    <div class="social-box">
 
                         <div class="social-svg">
                             <img src="icons/icon-google-plus.svg" alt="">
                         </div>
 
                         <div class="social-text">
-                            <h4 class="socical-name">Google+</h4>
-                            <p>2,530</p>
+                            <p class="socical-name">Google+</p>
+                            <p class="social-num-stat">2,530</p>
                         </div>
 
                     </div>
@@ -260,77 +264,77 @@
             </div>
 
 
-                <section class="message-user">
+            <section class="message-user">
 
-                    <h3 class="section-title">MESSAGE USER</h3>
+                <h3 class="section-title">MESSAGE USER</h3>
 
-                    <form action="">
+                <form action="">
 
-                        <input type="text" placeholder="Search for user" class="form-field" id="userField">
-                        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-                        <button type="submit" class="button-primary" id="send">Send</button>
+                    <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                    <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                    <button type="submit" class="button-primary" id="send">Send</button>
 
-                    </form>
+                </form>
 
-                </section>
+            </section>
 
-                <section class="settings">
+            <section class="settings">
 
-                    <h3 class="section-title">SETTINGS</h3>
+                <h3 class="section-title">SETTINGS</h3>
 
-                    <div>
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox">
+                <div>
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox">
 
-                            <strong>
-                                Send Email Notifications
-                            </strong>
+                        <strong>
+                            Send Email Notifications
+                        </strong>
 
-                            <span class="on-Switch">
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
-                    </div>
+                        <span class="on-Switch">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                </div>
 
-                    <div>
+                <div>
 
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox">
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox">
 
-                            <strong>
-                                Set Profile to Public
-                            </strong>
+                        <strong>
+                            Set Profile to Public
+                        </strong>
 
-                            <span class="on-Switch">
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
+                        <span class="on-Switch">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
 
-                    </div>
+                </div>
 
-                    <select class="form-field" id="timezone">
-                        <option disabled selected>Select a Timezone</option>
-                        <option>Eastern</option>
-                        <option>Central Africa Time</option>
-                        <option>Brasília Time</option>
-                        <option>China Standard Time</option>
-                        <option>Israel Daylight Time</option>
-                    </select>
+                <select class="form-field" id="timezone">
+                    <option disabled selected>Select a Timezone</option>
+                    <option>Eastern</option>
+                    <option>Central Africa Time</option>
+                    <option>Brasília Time</option>
+                    <option>China Standard Time</option>
+                    <option>Israel Daylight Time</option>
+                </select>
 
-                    <div class="settings-buttons">
+                <div class="settings-buttons">
 
-                        <button id="save" class="button-primary">Save</button>
+                    <button id="save" class="button-primary">Save</button>
 
-                        <button id="cancel" class="button-disabled">Cancel</button>
+                    <button id="cancel" class="button-disabled">Cancel</button>
 
-                    </div>
+                </div>
 
-                </section>
-            
+            </section>
+
 
         </main>
     </div>

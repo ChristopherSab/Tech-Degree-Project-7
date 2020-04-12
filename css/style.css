@@ -143,11 +143,11 @@ body {
         color: white;
     }
 
-    .social-container{
+    .social{
         margin: 0 1rem;
     }
 
-    .social-block{
+    .social-box{
         border: 1px solid darkgray;
         background-color: #F5F5F5;
         padding: 0 .5rem;
@@ -395,23 +395,23 @@ body {
                 padding: .5rem;
             }
 
-            .social-container,
+            .social,
             .activity {
                 border-bottom: 1px solid #696969;
                 border-top: 1px solid #696969;
                 padding: 2rem 1rem;
             }
 
-            .social-container {
+            .social {
                 margin: 0;
             }
 
-            .social-block-container {
+            .socials-container {
                 display: flex;
                 flex-direction: row;
             }
 
-            .social-block {
+            .social-box {
                 padding: 0 1rem;
                 margin: 0 auto;
             }
@@ -485,7 +485,7 @@ body {
             padding-right: 3rem;
         }
 
-        .social-block {
+        .social-box {
             padding: 0 4rem;
             margin-bottom: 2rem;
         }
