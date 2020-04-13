@@ -54,6 +54,9 @@ let cityTrafficData = new Chart(trafficChart, {
     },
 
     options: {
+
+        responsive: true,
+        maintainAspectRatio: false,
          
         legend: {
             display: false
@@ -101,6 +104,9 @@ let dailyChart = new Chart(dailyTrafficData, {
     },
 
     options: {
+
+        responsive: true,
+        maintainAspectRatio: false,
          
         legend: {
             display: false
@@ -135,6 +141,9 @@ let mobileDataChart = new Chart(mobileData, {
     },
 
     options: {
+
+        responsive: true,
+        maintainAspectRatio: false,
          
         legend: {
             display: true,
