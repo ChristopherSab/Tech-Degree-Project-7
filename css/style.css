@@ -386,11 +386,21 @@ html {
 
       .timezone-field {
         margin: 2rem 0;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 7px;
+        background-color: var(--color-tertiary);
       }
 
-      /*** M e d i a  Queries ***/
+    /*-------------------*/
+    /*  MEDIA QUERIES   */
+    /*------------------*/
 
       @media (min-width: 768px) {
+
+    /*-----------------*/
+    /*  Grid Styles   */
+    /*----------------*/
 
         .main-container {
             display: grid;
@@ -407,13 +417,6 @@ html {
                 flex-direction: row;
             }
 
-            .search {
-                width: 30vw;
-                margin-left: auto;
-                margin-right: 1rem;
-            }
-        
-
             .header{
                 grid-area: header;
             }
@@ -426,71 +429,100 @@ html {
                 align-items: flex-start;
             }
 
-            .navigation a img {
+            .main {
+                grid-area: main;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .main-headline,
+            .alert {
+                grid-column: 1 / span 2;
+            }
+
+
+            .traffic, 
+            .social {
+                grid-column: 1 / span 2;
+                padding: 0 1.5rem;
+            }
+
+            .daily-traffic, 
+            .members-section,
+            .message {
+                grid-column: 1 / span 1;
+            }
+
+            .mobile-users,
+            .activity,
+            .settings {
+                grid-column: 2 / span 1;
+            }
+
+
+        /*------------------*/
+        /*  Miscellaneous   */
+        /*------------------*/
+        
+            .nav-img {
                 width: 30px;
                 padding: 2rem 1rem;
             }
 
-            .main {
-                grid-area: main;
+            .search {
+                width: 35vw;
+                margin-left: auto;
+                margin-right: 1rem;
             }
 
-            .widget-container-full{
-                width: 85vw;
-                margin: 2rem 0 2rem 2rem;
-            }
-
-            .traffic {
-                padding-bottom: 2rem;
-                border-bottom: 1px solid #696969;
-            }
+        /*-----------------*/
+        /*  Chart Styles   */
+        /*----------------*/
 
             .traffic-nav {
                 justify-content: flex-end;
                 margin-right: 2rem;
             }
-
-            .daily-traffic {
-                margin: 0 1.5rem;
-                border-right: 1px solid #696969;
+            .traffic {
+                border-bottom: 1px solid var(--color-border-main);
             }
 
-            .daily-traffic,
-            .mobile-users {
-                display: inline-block;
-                width: 40vw;
-                padding: .5rem;
-            }
 
-            .social,
-            .activity {
-                border-bottom: 1px solid #696969;
-                border-top: 1px solid #696969;
-                padding: 2rem 1rem;
-            }
+
+
+        /*-----------------*/
+        /*  Socials Styles */
+        /*----------------*/
 
             .social {
+                border-bottom: 1px solid var(--color-border-main);
+                border-top: 1px solid var(--color-border-main);
                 margin: 0;
+                padding-bottom: 2rem;
             }
 
             .socials-container {
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
 
             .social-box {
                 padding: 0 1rem;
                 margin: 0 auto;
             }
-            
-            .members-section {
-                margin: 2rem;
-            }
 
-            .member {
-                margin-bottom: 1rem;
-                border-bottom: 1px solid #F5F5F5;
-            }
+        /*-----------------*/
+        /*  Member Styles */
+        /*----------------*/
+        
+
+
+        /*------------------*/
+        /*  Activity Styles */
+        /*------------------*/
+
 
             .member-details p,
             .member-details a,
@@ -503,9 +535,6 @@ html {
                 font-size: 1rem;
             }
 
-            .message {
-               margin: 1rem;
-            }
 
             input[type=text], textarea {
 
@@ -514,11 +543,6 @@ html {
                 margin-bottom: 1.5rem;
               }
 
-              .settings {
-                  padding: 2rem 1rem;
-                  margin: 2rem 0;
-                  border-top: 1px solid #696969;
-              }
 
               .switch-ios {
                 display: grid;
@@ -543,63 +567,9 @@ html {
 
     @media (min-width: 1024px) {
 
-        .section-title {
-            text-align: left;
-            margin-left: 2rem;
-        }
-
-        .daily-traffic {
-            padding-right: 3rem;
-        }
-
-        .social-box {
-            padding: 0 4rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-text p {
-            margin-top: 0;
+        .main-container {
+            max-width: 1200px;
         }
     
-        .social-icon-container {
-            width: 50px;
-            height: 50px;
-            padding: 1rem;
-            border-radius: 50%;
-            margin: 2rem 2rem 0 0 ;
-        }
-    
-        .social-icon-container img {
-            width: 45px;
-            height: 45px;
-        }
-
         
-
-        .user-section {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .member-activity {
-            margin: 0;
-        }
-
-        .activity {
-            margin: 0;
-            border-top: none;
-            border-bottom: none;
-        }
-
-        .message {
-            border-top: 1px solid #696969;
-        }
     }
-  
-      
-
-
-
-
-
-
