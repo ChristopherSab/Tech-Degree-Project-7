@@ -459,10 +459,6 @@ html {
                 grid-column: 2 / span 1;
             }
 
-
-        /*------------------*/
-        /*  Miscellaneous   */
-        /*------------------*/
         
             .nav-img {
                 width: 30px;
@@ -475,9 +471,6 @@ html {
                 margin-right: 1rem;
             }
 
-        /*-----------------*/
-        /*  Chart Styles   */
-        /*----------------*/
 
             .traffic-nav {
                 justify-content: flex-end;
@@ -487,12 +480,6 @@ html {
                 border-bottom: 1px solid var(--color-border-main);
             }
 
-
-
-
-        /*-----------------*/
-        /*  Socials Styles */
-        /*----------------*/
 
             .social {
                 border-bottom: 1px solid var(--color-border-main);
@@ -513,15 +500,6 @@ html {
                 margin: 0 auto;
             }
 
-        /*-----------------*/
-        /*  Member Styles */
-        /*----------------*/
-        
-
-
-        /*------------------*/
-        /*  Activity Styles */
-        /*------------------*/
 
 
             .member-details p,
