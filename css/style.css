@@ -577,5 +577,14 @@ html {
         .main-container {
             margin: auto; 
         }
+
+        .social-box {
+            padding: 0 4rem;
+        }
+
+        .settings,
+        .message {
+            margin-bottom: 4rem;
+        }
      
     }
