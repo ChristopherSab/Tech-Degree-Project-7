@@ -500,18 +500,10 @@ html {
                 margin: 0 auto;
             }
 
-
-
-            .member-details p,
-            .member-details a,
-            .activity-item,
-            .activity-time {
-                font-size: 1.2rem;
+            .settings {
+                margin: 0;
             }
 
-            .date {
-                font-size: 1rem;
-            }
 
 
             input[type=text], textarea {
@@ -546,7 +538,9 @@ html {
     @media (min-width: 1024px) {
 
         .main-container {
-            max-width: 1200px;
+
+            margin: auto;
+           
         }
     
         
