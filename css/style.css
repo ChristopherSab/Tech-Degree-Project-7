@@ -7,8 +7,8 @@
     --color-secondary:#4D4F73;
     --color-tertiary:#DFE2F2;
 
-    --color-border-main: #F5F5F5;
-    --color-border-secondary: #696969;
+    --color-border-primary: #696969;
+    --color-border-secondary: #F5F5F5;
 }
 
 body {
@@ -290,7 +290,7 @@ html {
         flex-direction: row;
         color: #696969;
         margin-bottom: 1rem;
-        border-bottom: 1px solid #F5F5F5;
+        border-bottom: 2px solid var(--color-border-secondary);
         padding: 0.5rem;
     }
 
@@ -308,7 +308,7 @@ html {
         margin-left: auto;
         text-decoration: none;
         font-size: 2rem;
-        color: #7580BF;
+        color: var(--color-primary);
     }
 
     /*-------------------*/
@@ -328,7 +328,7 @@ html {
     input[type=text], textarea {
 
         padding: 12px;
-        border: 1px solid var(--color-border-main);
+        border: 1px solid var(--color-border-primary);
         border-radius: 4px;
         background-color: var(--color-tertiary);
         margin-bottom: 1.3rem;
@@ -336,7 +336,7 @@ html {
       }
 
       button[type=submit] {
-        background-color: #7580BF;
+        background-color: var(--color-primary);
         color: white;
         padding: 12px 15px;
         border: none;
@@ -476,7 +476,13 @@ html {
                 margin-right: 2rem;
             }
             .traffic {
-                border-bottom: 1px solid var(--color-border-main);
+                border-bottom: 1px solid var(--color-border-primary);
+                padding-bottom: 1rem;
+            }
+
+            .daily-traffic {
+                border-right: 1px solid var(--color-border-primary);
+                padding: 0 .5rem;
             }
 
         /*-------------------*/
@@ -484,8 +490,8 @@ html {
         /*-------------------*/
 
             .social {
-                border-bottom: 1px solid var(--color-border-main);
-                border-top: 1px solid var(--color-border-main);
+                border-bottom: 1px solid var(--color-border-primary);
+                border-top: 1px solid var(--color-border-primary);
                 margin: 0;
                 padding-bottom: 2rem;
             }
@@ -507,15 +513,21 @@ html {
         /*----------------------------------*/
 
             .members-section {
-                border-right: 1px solid var(--color-border-main);
+                border-right: 1px solid var(--color-border-primary);
                 padding-right: 1rem;
+            }
+
+            .members-section,
+            .activity { 
+                border-bottom: 1px solid var(--color-border-primary);
+                margin: 0;
             }
 
             .member-activity,
             .member-box {
                 margin-bottom: 1rem;
                 padding: 0.5rem;
-                border-bottom: 1px solid var(--color-border-main);
+                border-bottom: 1px solid var(--color-border-secondary);
             }
 
             .activity-details{
@@ -527,9 +539,10 @@ html {
                 margin-left: 0.5rem;
             }
 
-        /*----------------*/
-        /*  Grid Styles   */
-        /*----------------*/
+        /*--------------------------------------*/
+        /*  Message && Settings Widget Styles   */
+        /*--------------------------------------*/
+
         input[type=text], textarea {
 
             padding: 12px;
@@ -545,11 +558,16 @@ html {
             margin: 0 1rem 1.5rem 1rem;
         }
 
-        /*---------------------------*/
-        /*  Settings Widget Styles   */
-        /*---------------------------*/
-        .settings {
-            margin: 0 1rem;
+        .message{
+            border-right: 1px solid var(--color-border-primary);
+        }
+
+        .settings,
+        .message {
+            margin-left: 0;
+            margin-top: 0;
+            margin-right: 0;
+            padding: 0.5rem;
         }
 
         .switch-ios {
@@ -576,6 +594,10 @@ html {
 
         .main-container {
             margin: auto; 
+        }
+
+        .traffic-nav-link {
+            padding: 1rem;
         }
 
         .social-box {
