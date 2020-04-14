@@ -1,13 +1,36 @@
 
+
+//Notifications//
+
+const notificationBell = document.getElementsByClassName('bell-icon')[0];
+
+const notificationList = document.getElementsByClassName('notifications')[0];
+
+
+
+notificationBell.addEventListener ('click', () => {
+
+    notificationList.innerHTML =
+
+`
+<ul>
+    <li>You Have 3 Unread Messages   <span class= "cancel">X</span> </li>
+    <li>You Have 7 New Followers   <span class= "cancel">X</span> </li>
+    <li>Your Password Expires In 5 Days   <span class= "cancel">X</span> </li>
+</ul>
+`;
+
+});
+
 //Alert Button//
 const alertBanner = document.getElementById("alert");
 
 alertBanner.innerHTML =
 `
-<div class="alert-banner">
-<p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-<p class="alert-banner-close">X</p>
-</div>
+    <div class="alert-banner">
+        <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+        <p class="alert-banner-close">X</p>
+    </div>
 `;
 
 alertBanner.addEventListener('click', e => {

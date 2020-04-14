@@ -158,6 +158,41 @@ html {
         border-right: 1px solid var(--color-secondary);
     }
 
+    .notifications ul {
+        background-color: white;
+        color: darkgray;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        padding-top: 1rem;
+        border-radius: 5px;
+        border: 1px solid lightgreen;
+    }
+
+    .notifications li {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--color-border-secondary);
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8rem;
+    }
+
+    .notifications li::before {
+        content: "•";
+        padding-right: 8px;
+        color: lightgreen;
+        font-size: 1.5rem;;
+        top: 0;
+    }
+
+    .cancel {
+        margin-left: auto;
+        font-weight: bold;
+        padding: 0 1.7rem;
+    }
+
+
     /*----------------*/
     /* Headline Styles*/
     /*----------------*/
@@ -603,6 +638,14 @@ html {
 
         .main-container {
             margin: auto; 
+        }
+
+        .notifications ul {
+            right: 200px;
+        }
+
+        .notifications li {
+            font-size: inherit;
         }
 
         .traffic-nav-link {
