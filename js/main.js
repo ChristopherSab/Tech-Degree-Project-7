@@ -16,9 +16,9 @@ notificationBell.addEventListener ('click', () => {
     notificationList.innerHTML =
 `
 <ul>
-    <li class="notification-item">You Have 3 Unread Messages   <span class="cancel">X</span> </li>
+    <li class="notification-item">You Have 1 Unread Message   <span class="cancel">X</span> </li>
     <li class="notification-item">You Have 7 New Followers   <span class="cancel">X</span> </li>
-    <li class="notification-item">Your Password Expires In 5 Days   <span class="cancel">X</span> </li>
+    <li class="notification-item">Your Trial Expires In 2 Days   <span class="cancel">X</span> </li>
 </ul>
 `;
 
@@ -113,6 +113,27 @@ let cityTrafficData = new Chart(trafficChart, {
     }
 
 });
+
+function addData() {
+
+    data = [45,60,40,70,55,30,10,75,20,35,65];
+
+    cityTrafficData.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    cityTrafficData.update();
+}
+
+
+const hourlyData = document.getElementsByClassName('traffic-nav-link').innerHTML('Hourly');
+
+hourlyData.addEventListener('click', () => {
+
+    addData();
+
+});
+
+
 
 // Daily Traffic Bar Chart
 
