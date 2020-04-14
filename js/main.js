@@ -14,27 +14,33 @@ notificationBell.addEventListener ('click', () => {
 
 `
 <ul>
-    <li>You Have 3 Unread Messages   <span class= "cancel">X</span> </li>
-    <li>You Have 7 New Followers   <span class= "cancel">X</span> </li>
-    <li>Your Password Expires In 5 Days   <span class= "cancel">X</span> </li>
+    <li class="notification-item">You Have 3 Unread Messages   <span class= "cancel">X</span> </li>
+    <li class="notification-item">You Have 7 New Followers   <span class= "cancel">X</span> </li>
+    <li class="notification-item">Your Password Expires In 5 Days   <span class= "cancel">X</span> </li>
 </ul>
 `;
 
 });
 
-//const removeListItem = document.getElementsByClassName('cancel');
+const notificationItem = document.getElementsByClassName('notification-item');
 
-//removeListItem.addEventListener ('click', e => {
+const removeNotification = document.getElementsByClassName('cancel');
 
-//    const element = e.target;
+removeNotification.addEventListener('click', e => {
 
-//    for(let i = 0; i < removeListItem.length; i ++){
-//        if(element.classList.contains("cancel")){
-//            removeListItem[i].style.display = "none";
-//        }
-//    }
+    const element = e.target;
 
-//});
+    for(let i =0; i < notificationItem.length; i ++){
+
+
+        if(element.classList.contains('cancel')){
+            notificationItem.removeChild(notificationItem.childNode[i]);
+        }
+    }
+
+});
+
+
 
 //Alert Button//
 const alertBanner = document.getElementById("alert");

@@ -189,7 +189,13 @@ html {
     .cancel {
         margin-left: auto;
         font-weight: bold;
-        padding: 0 1.7rem;
+        padding: 0.2rem 1.7rem;
+    }
+
+    .cancel:hover {
+        background-color:lightcoral;
+        border-radius: 5px;
+        color: white;
     }
 
 
