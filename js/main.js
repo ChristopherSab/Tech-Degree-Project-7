@@ -7,39 +7,36 @@ const notificationBell = document.getElementsByClassName('bell-icon')[0];
 const notificationList = document.getElementsByClassName('notifications')[0];
 
 
-
 notificationBell.addEventListener ('click', () => {
 
-    notificationList.innerHTML =
+    // Removes the green Notification Alert dot when clicked //
+    const notificationGreenDot = document.querySelector('.dot');
+    notificationGreenDot.style.display = "none";
 
+    notificationList.innerHTML =
 `
 <ul>
-    <li class="notification-item">You Have 3 Unread Messages   <span class= "cancel">X</span> </li>
-    <li class="notification-item">You Have 7 New Followers   <span class= "cancel">X</span> </li>
-    <li class="notification-item">Your Password Expires In 5 Days   <span class= "cancel">X</span> </li>
+    <li class="notification-item">You Have 3 Unread Messages   <span class="cancel">X</span> </li>
+    <li class="notification-item">You Have 7 New Followers   <span class="cancel">X</span> </li>
+    <li class="notification-item">Your Password Expires In 5 Days   <span class="cancel">X</span> </li>
 </ul>
 `;
 
+    const removeNotification = document.querySelectorAll('.cancel');
+    removeNotification.forEach(notification => {
+        notification.addEventListener('click', e => {
+            const element = e.target;
+            if (element.classList.contains('cancel')) {
+                let parentNotification = element.parentNode;
+                console.log(parentNotification);
+                let ul = document.querySelector('.notifications ul');
+                console.log(ul);
+                ul.removeChild(parentNotification);
+            } 
+
+        });
+    });
 });
-
-const notificationItem = document.getElementsByClassName('notification-item');
-
-const removeNotification = document.getElementsByClassName('cancel');
-
-removeNotification.addEventListener('click', e => {
-
-    const element = e.target;
-
-    for(let i =0; i < notificationItem.length; i ++){
-
-
-        if(element.classList.contains('cancel')){
-            notificationItem.removeChild(notificationItem.childNode[i]);
-        }
-    }
-
-});
-
 
 
 //Alert Button//
