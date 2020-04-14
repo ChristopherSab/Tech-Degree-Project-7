@@ -22,6 +22,20 @@ notificationBell.addEventListener ('click', () => {
 
 });
 
+//const removeListItem = document.getElementsByClassName('cancel');
+
+//removeListItem.addEventListener ('click', e => {
+
+//    const element = e.target;
+
+//    for(let i = 0; i < removeListItem.length; i ++){
+//        if(element.classList.contains("cancel")){
+//            removeListItem[i].style.display = "none";
+//        }
+//    }
+
+//});
+
 //Alert Button//
 const alertBanner = document.getElementById("alert");
 
