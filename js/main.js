@@ -9,7 +9,7 @@ const notificationList = document.getElementsByClassName('notifications')[0];
 
 notificationBell.addEventListener ('click', () => {
 
-    // Removes the green Notification Alert dot when clicked //
+    // Removes the green Notification Alert dot when bell is clicked //
     const notificationGreenDot = document.querySelector('.dot');
     notificationGreenDot.style.display = "none";
 
@@ -32,9 +32,14 @@ notificationBell.addEventListener ('click', () => {
                 let ul = document.querySelector('.notifications ul');
                 console.log(ul);
                 ul.removeChild(parentNotification);
+
+                if (ul.childElementCount === 0) {
+                    ul.style.display = "none";
+                  }
             } 
 
         });
+
     });
 });
 
@@ -87,9 +92,7 @@ let cityTrafficData = new Chart(trafficChart, {
             pointBackgroundColor: 'white',
             pointBorderColor: '#7580BF',
             pointBorderWidth: 3,
-            pointRadius: 5,
-
-            
+            pointRadius: 5,  
         }]
     },
 
