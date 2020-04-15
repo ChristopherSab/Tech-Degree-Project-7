@@ -128,9 +128,29 @@ hourlyData.addEventListener('click', () => {
 const dailyData = document.getElementsByClassName('traffic-nav-link')[1];
 const dailyDataValues = [105,307,503,408,103,504,107,201,309,402,401,405];
 
-hourlyData.addEventListener('click', () => {
+dailyData.addEventListener('click', () => {
     
 	cityTrafficData.data.datasets[0].data = dailyDataValues;
+	cityTrafficData.update();
+});
+
+// Weekly Data Update
+const weeklyData = document.getElementsByClassName('traffic-nav-link')[2];
+const weeklyDataValues = [530,450,919,1200,480,2000,501,667,992,1400,1433,2009];
+
+weeklyData.addEventListener('click', () => {
+    
+	cityTrafficData.data.datasets[0].data = weeklyDataValues;
+	cityTrafficData.update();
+});
+
+// Monthly Data Update
+const monthlyData = document.getElementsByClassName('traffic-nav-link')[3];
+//const weeklyDataValues = [530,450,919,1200,480,2000,501,667,992,1400,1433,2009];
+
+weeklyData.addEventListener('click', () => {
+    
+	cityTrafficData.data.datasets[0].data = data;
 	cityTrafficData.update();
 });
 
