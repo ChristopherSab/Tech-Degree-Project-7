@@ -125,7 +125,7 @@ function addData() {
 }
 
 
-const hourlyData = document.getElementsByClassName('traffic-nav-link').innerHTML('Hourly');
+const hourlyData = document.getElementsByClassName('traffic-nav-link')[0];
 
 hourlyData.addEventListener('click', () => {
 
