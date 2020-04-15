@@ -146,15 +146,13 @@ weeklyData.addEventListener('click', () => {
 
 // Monthly Data Update
 const monthlyData = document.getElementsByClassName('traffic-nav-link')[3];
+const monthlyDataValues = [4500,6000,4000,7000,5500,3003,1000,7500,2000,3500,6500];
 
 monthlyData.addEventListener('click', () => {
-    
-	cityTrafficData.data.datasets[0].data = data;
+
+	cityTrafficData.data.datasets[0].data = monthlyDataValues;
 	cityTrafficData.update();
 });
-
-
-
 
 
 
