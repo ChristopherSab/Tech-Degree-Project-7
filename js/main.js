@@ -114,24 +114,28 @@ let cityTrafficData = new Chart(trafficChart, {
 
 });
 
-function addData() {
-
-    data = [45,60,40,70,55,30,10,75,20,35,65];
-
-    cityTrafficData.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
-    cityTrafficData.update();
-}
-
-
+// Hourly  Data Update
 const hourlyData = document.getElementsByClassName('traffic-nav-link')[0];
+const hourlyDataValues = [10,30,00,40,10,50,10,20,30,40,40,40];
 
 hourlyData.addEventListener('click', () => {
-
-    addData();
-
+  
+	cityTrafficData.data.datasets[0].data = hourlyDataValues;
+	cityTrafficData.update();
 });
+
+// Daily  Data Update
+const dailyData = document.getElementsByClassName('traffic-nav-link')[1];
+const dailyDataValues = [105,307,503,408,103,504,107,201,309,402,401,405];
+
+hourlyData.addEventListener('click', () => {
+    
+	cityTrafficData.data.datasets[0].data = dailyDataValues;
+	cityTrafficData.update();
+});
+
+
+
 
 
 
