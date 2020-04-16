@@ -389,20 +389,27 @@ html {
     justify-content: center;
     }
 
-    #userField {
-        width: 449.6px;
-    }
    
     .message{
         margin: 0 1rem;
     }
+
+    .xdsoft_autocomplete {
+        display: flex !important;
+        width: unset !important;
+      }
+      .xdsoft_autocomplete input {
+        background: none !important;
+        width: unset !important;
+        flex-basis: 100% !important;
+        flex-grow: 1;
+      }
 
     input[type=text], textarea {
 
         padding: 12px;
         border: 1px solid var(--color-border-primary);
         border-radius: 4px;
-        background-color: var(--color-tertiary);
         margin-bottom: 1.3rem;
 
       }
@@ -458,7 +465,6 @@ html {
         width: 100%;
         padding: 1rem;
         border-radius: 7px;
-        background-color: var(--color-tertiary);
       }
 
     /*-------------------*/
@@ -621,10 +627,6 @@ html {
             margin: 0 1rem 1.5rem 1rem;
           }
 
-          #userField {
-            width: 276px;
-        }
-
           textarea{
               height: 130px;
           }
@@ -691,10 +693,6 @@ html {
         .settings,
         .message {
             margin-bottom: 4rem;
-        }
-
-        #userField {
-            width: 391px;
         }
      
     }
