@@ -388,6 +388,10 @@ html {
     flex-direction: column;
     justify-content: center;
     }
+
+    #userField {
+        width: 449.6px;
+    }
    
     .message{
         margin: 0 1rem;
@@ -617,6 +621,10 @@ html {
             margin: 0 1rem 1.5rem 1rem;
           }
 
+          #userField {
+            width: 276px;
+        }
+
           textarea{
               height: 130px;
           }
@@ -683,6 +691,10 @@ html {
         .settings,
         .message {
             margin-bottom: 4rem;
+        }
+
+        #userField {
+            width: 391px;
         }
      
     }

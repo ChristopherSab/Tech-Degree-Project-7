@@ -262,7 +262,7 @@ send.addEventListener('click', () => {
     }
 });
 
-// Autocomplete Plugin
+// Autocomplete JQuery Plugin Initialization
 
 var userNames = ['Victoria Chambers' , 'Dale Byrd' , 'Dawn Wood' , 'Dan Oliver'];
 
