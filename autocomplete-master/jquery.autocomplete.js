@@ -784,7 +784,14 @@
 				return true;
 				case ENTER:
 					if (iOpen) {
-						$input.trigger('pick.xdsoft');
+						if (options.autoselect) {
+							$input.trigger('pick.xdsoft');
+						} else if (!options.autoselect && active) {
+							$input.trigger('pick.xdsoft');
+						} else {
+							$input.trigger('close.xdsoft');
+							return true;
+						}
 						event.preventDefault();
 						return false;
 					} else {
@@ -989,12 +996,12 @@
 							background:$input.css('background')
 						},options.hintStyle));
 						
-						
-						if( olderBackground!==false ){
-							$hint.css('background',olderBackground);
-						}else{
-							olderBackground = $input.css('background');
-						}
+// This code is not needed because we are already setting $hint in upper line						
+// 						if( olderBackground !== false ){
+// 							$hint.css('background',olderBackground);
+// 						} else {
+// 							olderBackground = $input.css('background');
+// 						}
 						
 						try{
 							$input[0].style.setProperty('background', 'transparent', 'important');
