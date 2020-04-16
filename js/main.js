@@ -264,5 +264,10 @@ send.addEventListener('click', () => {
 
 // Autocomplete Plugin
 
+var userNames = ['Victoria Chambers' , 'Dale Byrd' , 'Dawn Wood' , 'Dan Oliver'];
 
-
+$ ( function () { 
+	$ ("#autocomplete"). autocomplete ({
+		source : [ userNames ]
+	}); 
+});
