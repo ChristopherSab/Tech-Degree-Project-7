@@ -266,8 +266,8 @@ send.addEventListener('click', () => {
 
 var userNames = ['Victoria Chambers' , 'Dale Byrd' , 'Dawn Wood' , 'Dan Oliver'];
 
-$ ( function () { 
-	$ ("#autocomplete"). autocomplete ({
-		source : [ userNames ]
-	}); 
-});
+$(function () { 
+    $("#userField").autocomplete({
+      source: [userNames]
+    }); 
+  });
