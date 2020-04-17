@@ -271,3 +271,34 @@ $(function () {
       source: [userNames]
     }); 
   });
+
+
+  //Save Settings In Local Storage
+
+  function supportsLocalStorage() {
+      try{
+      return 'localStorage' in window && window['localStorage'] !== null;
+      } catch (e) {
+        return false;
+      }
+  }
+
+  window.onload = function() {
+      if(this.supportsLocalStorage) {
+
+        document.querySelector('.save').addEventListener('click', function (e){
+
+            let checkedState = document.querySelector('.toggle-state');
+            checkedState.checked = false;
+
+
+
+
+
+
+        })
+
+
+      }
+
+  }
