@@ -536,7 +536,16 @@ html {
         
             .nav-img {
                 width: 30px;
-                padding: 2rem 1rem;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .nav-img:first-child {
+                margin-top: 2rem;
+            }
+
+            .nav-img:hover {
+                border-left: 3px solid lightgreen;
             }
 
             .search {
