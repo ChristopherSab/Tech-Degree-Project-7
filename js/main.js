@@ -283,16 +283,25 @@ $(function () {
       }
   }
 
-  window.onload = function() {
+    let emailCheckbox =  document.querySelector('.email-checkbox');
+    let profileCheckbox= document.querySelector('.profile-checkbox');
+
+    if(emailCheckbox.checked == true){
+
+        console.log('This is Working Properly, You have Checked the email Checkbox');
+    }
+
+  /*window.onload = function() {
       if(this.supportsLocalStorage) {
 
-        document.querySelector('.save').addEventListener('click', function (e){
+        document.querySelector('.save').addEventListener('click', function (){
 
-            let checkedState = document.querySelector('.toggle-state');
-            checkedState.checked = false;
+            if(emailCheckbox.checked == true){
+                
+                console.log('This is working');
+            }
 
-
-
+           
 
 
 
@@ -301,4 +310,4 @@ $(function () {
 
       }
 
-  }
+  } */
