@@ -283,31 +283,69 @@ $(function () {
       }
   }
 
-    let emailCheckbox =  document.querySelector('.email-checkbox');
-    let profileCheckbox= document.querySelector('.profile-checkbox');
+ 
+    
+  const emailCheckbox =  document.querySelector('.email-checkbox');
+  const profileCheckbox= document.querySelector('.profile-checkbox');
+  const timeZoneDropDown = document.getElementById('timezone');
+
+    var emailCheckStatus;
+    var profileCheckStatus;
+    var timeZoneValue;
+
+
+//Time Zone Event Listener
+  timeZoneDropDown.addEventListener('change', function (event) {
+    //localStorage.setItem('timeZone', event.target.value);
+    timeZoneValue = event.target.value;
+
+})
+
+
+//Email CheckBox Event Listener
+emailCheckbox.addEventListener('change', () => {
 
     if(emailCheckbox.checked == true){
-
-        console.log('This is Working Properly, You have Checked the email Checkbox');
+        //localStorage.setItem('emailCheckbox','true');
+        emailCheckStatus = 'true';  
     }
 
-  /*window.onload = function() {
+});
+
+
+//Profile CheckBox Event Listener
+profileCheckbox.addEventListener('change', () => {
+
+    if(profileCheckbox.checked == true){
+        //localStorage.setItem('profileCheckbox','true');
+        profileCheckStatus = 'true';
+    }
+
+});
+
+
+  window.onload = function() {
       if(this.supportsLocalStorage) {
 
-        document.querySelector('.save').addEventListener('click', function (){
+        const saveButton = document.querySelector('#save');
 
-            if(emailCheckbox.checked == true){
-                
-                console.log('This is working');
-            }
+        //Event Listener For Save Button
+        saveButton.addEventListener('click', () => {
 
-           
+            console.log(emailCheckStatus);    
+            console.log(profileCheckStatus);
+            console.log(timeZoneValue);
+
+        });
+
+        const clearButton = document.querySelector('#cancel');
+
+        //Event Listener For Cancel Button
+        clearButton.addEventListener('click', () => {
 
 
-
-        })
-
+        });
 
       }
 
-  } */
+  }
