@@ -23,7 +23,6 @@ html {
 /*------------*/
 /* Grid Styles*/
 /*------------*/
-
 .main-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -216,7 +215,6 @@ html {
         color: white;
     }
 
-
     /*----------------*/
     /* Headline Styles*/
     /*----------------*/
@@ -388,7 +386,6 @@ html {
     flex-direction: column;
     justify-content: center;
     }
-
    
     .message{
         margin: 0 1rem;
@@ -406,7 +403,6 @@ html {
       }
 
     input[type=text], textarea {
-
         padding: 12px;
         border: 1px solid var(--color-border-primary);
         border-radius: 4px;
@@ -467,9 +463,9 @@ html {
         border-radius: 7px;
       }
 
-    /*-------------------*/
-    /*  MEDIA QUERIES   */
-    /*------------------*/
+    /*----------------------*/
+    /*  ALL MEDIA QUERIES   */
+    /*----------------------*/
 
       @media (min-width: 768px) {
 
@@ -532,7 +528,6 @@ html {
             .settings {
                 grid-column: 2 / span 1;
             }
-
         
             .nav-img {
                 width: 30px;
@@ -575,7 +570,6 @@ html {
         /*-------------------*/
         /*  Socials Styles   */
         /*-------------------*/
-
             .social {
                 border-bottom: 1px solid var(--color-border-primary);
                 border-top: 1px solid var(--color-border-primary);
@@ -703,5 +697,4 @@ html {
         .message {
             margin-bottom: 4rem;
         }
-     
     }

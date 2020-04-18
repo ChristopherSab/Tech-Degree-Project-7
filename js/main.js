@@ -1,9 +1,8 @@
 
 
-//Notifications//
+/* NOTIFICATIONS [SECTION] AFTER A USERS CLICKS BELL ICON */
 
 const notificationBell = document.getElementsByClassName('bell-icon')[0];
-
 const notificationList = document.getElementsByClassName('notifications')[0];
 
 
@@ -22,6 +21,7 @@ notificationBell.addEventListener ('click', () => {
 </ul>
 `;
 
+    //When A User Clicks The 'X' Icon It Deletes The Notification
     const removeNotification = document.querySelectorAll('.cancel');
     removeNotification.forEach(notification => {
         notification.addEventListener('click', e => {
@@ -44,7 +44,7 @@ notificationBell.addEventListener ('click', () => {
 });
 
 
-//Alert Button//
+/* ALERT BUTTON SECTION*/
 const alertBanner = document.getElementById("alert");
 
 alertBanner.innerHTML =
@@ -62,12 +62,12 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
-//Traffic Data//
+/* TRAFFIC DATA LINE CHART SECTION*/
 let trafficChart = document.getElementById("traffic-chart").getContext('2d');
 
 
 let cityTrafficData = new Chart(trafficChart, {
-    type: 'line', //types of chart could be: bar, horizontal bar, doughnut, pie, radar ...
+    type: 'line', 
 
     data: {
         labels: ['Leeds', 'Sheffield', 'Manchester', 'Birmingham', 'London', 'Swansea', 'Newcastle',
@@ -155,14 +155,13 @@ monthlyData.addEventListener('click', () => {
 });
 
 
-
-// Daily Traffic Bar Chart
+/* DAILY TRAFFIC BAR CHART */
 
 let dailyTrafficData = document.getElementById("daily-chart").getContext('2d');
 
 
 let dailyChart = new Chart(dailyTrafficData, {
-    type: 'bar', //types of chart could be: bar, horizontal bar, doughnut, pie, radar ...
+    type: 'bar', 
 
     data: {
         labels: ['M ', 'T', 'W', 'T', 'F', 'S', 'S'],
@@ -180,16 +179,11 @@ let dailyChart = new Chart(dailyTrafficData, {
             
             backgroundColor: '#7580BF',
             borderRadius: 5,
-           // pointBorderColor: '#7580BF',
-           // pointBorderWidth: 3,
-
-
             
         }]
     },
 
     options: {
-
         responsive: true,
         maintainAspectRatio: false,
          
@@ -200,13 +194,12 @@ let dailyChart = new Chart(dailyTrafficData, {
 
 });
 
-// Mobile Users
+/* MOBILE USERS DOUGHNUT CHART SECTION */
 
 let mobileData = document.getElementById("doughnut-chart").getContext('2d');
 
-
 let mobileDataChart = new Chart(mobileData, {
-    type: 'doughnut', //types of chart could be: bar, horizontal bar, doughnut, pie, radar ...
+    type: 'doughnut', 
 
     data: {
         labels: ['Phones', 'Tablets', 'Desktop'],
@@ -220,13 +213,10 @@ let mobileDataChart = new Chart(mobileData, {
             
             backgroundColor: ['#75B8BF', '#7EBF88', '#7580BF'],
             borderRadius: 5,
-
-            
         }]
     },
 
     options: {
-
         responsive: true,
         maintainAspectRatio: false,
          
@@ -244,7 +234,7 @@ let mobileDataChart = new Chart(mobileData, {
 });
 
 
-/* Messaging Section */
+/* MESSAGING SECTION */
 
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
@@ -259,11 +249,12 @@ send.addEventListener('click', () => {
     alert("Please fill out message field before sending");
     } else {
     alert(`Message successfully sent to: ${user.value}`);
+        user.value = "";
+        message.value = "";
     }
 });
 
-// Autocomplete JQuery Plugin Initialization
-
+/* Autocomplete (Input Message User SECTION) JQuery Plugin Initialization */
 var userNames = ['Victoria Chambers' , 'Dale Byrd' , 'Dawn Wood' , 'Dan Oliver'];
 
 $(function () { 
@@ -273,8 +264,9 @@ $(function () {
   });
 
 
-  //Save Settings In Local Storage
+/*USER SETTINGS SECTION */
 
+//This Function Checks If The Browser Supports Local Storage
   function supportsLocalStorage() {
       try{
       return 'localStorage' in window && window['localStorage'] !== null;
@@ -282,70 +274,89 @@ $(function () {
         return false;
       }
   }
-
  
-    
   const emailCheckbox =  document.querySelector('.email-checkbox');
   const profileCheckbox= document.querySelector('.profile-checkbox');
   const timeZoneDropDown = document.getElementById('timezone');
 
+  //The Results From The Event Listeners Will Be Assigned To The Variables Below//
+  let emailHasBeenChecked;
+  let profileHasBeenChecked;
+  let timeZoneSelectValue;
 
-//Email CheckBox Event Listener
+//Email CheckBox Event Listener//
 emailCheckbox.addEventListener('change', () => {
 
     if(emailCheckbox.checked == true){
-        localStorage.setItem('emailCheckbox','true');
+        emailHasBeenChecked = true;
     }
-
 });
 
-//Profile CheckBox Event Listener
+//Profile CheckBox Event Listener//
 profileCheckbox.addEventListener('change', () => {
 
     if(profileCheckbox.checked == true){
-        localStorage.setItem('profileCheckbox','true');
+        profileHasBeenChecked = true;
     }
-
 });
 
-//Time Zone Event Listener
-timeZoneDropDown.addEventListener('change', function (event) {
-    localStorage.setItem('timeZone', event.target.value);
+//Time Zone Event Listener//
+timeZoneDropDown.addEventListener('input', function (event) {
+
+    let selectedTimeZone = event.target.value;
+    timeZoneSelectValue = selectedTimeZone;
 })
 
-let savedEmailCheckStatus = localStorage.getItem('emailCheckbox');
-let savedProfileCheckStatus = localStorage.getItem('profileCheckbox');
-let savedTimeZone = localStorage.getItem('timeZone');
+/*
+The function below has a collection of the 'SETTINGS CHANGES' made by the User.
+(This will be used in the SAVE BUTTON event Listener to Save all the changes)
+*/
+function changesToSave(){
+
+    if(emailHasBeenChecked == true){
+        localStorage.setItem('emailCheckbox','true');
+    } 
+    if(profileHasBeenChecked == true) {
+        localStorage.setItem('profileCheckbox','true');
+    } 
+    if(typeof timeZoneSelectValue !== "undefined") {
+        localStorage.setItem('timeZone', timeZoneSelectValue);
+    }
+}
+
 
   window.onload = function() {
       if(this.supportsLocalStorage) {
 
-        //Set Email Notification
+        //Variables for Getting Saved Strings in Storage
+        let savedEmailCheckStatus = localStorage.getItem('emailCheckbox');
+        let savedProfileCheckStatus = localStorage.getItem('profileCheckbox');
+        let savedTimeZone = localStorage.getItem('timeZone');
+
+        //This Will 'Check' The Email Notification Checkbox (Only "if" This was previously Checked & Saved)
         if(savedEmailCheckStatus === 'true'){
             emailCheckbox.checked = true;
         }
         
-        //Set Profile Status
+        //This Will 'Check' The Profile Checkbox (Only "if" This was previously Checked & Saved)
         if(savedProfileCheckStatus === 'true'){
             profileCheckbox.checked = true;
         }
         
-        //Set TimeZone Status
-            //if(savedTimeZone !== ""){
-
-            //}
-
+        //This Will Set TimeZone Option (Only "if" This was previously selected & Saved)
+        if(savedTimeZone !== null) {
+           timeZoneDropDown.value = savedTimeZone;
+        }
 
         const saveButton = document.querySelector('#save');
 
         //Event Listener For Save Button
         saveButton.addEventListener('click', () => {
-
+            
+            changesToSave();
             saveButton.disabled = true;
             saveButton.style.backgroundColor = 'darkgray';
             clearButton.style.backgroundColor = '#7580BF';
-
-
         });
 
         const clearButton = document.querySelector('#cancel');
@@ -353,18 +364,15 @@ let savedTimeZone = localStorage.getItem('timeZone');
         //Event Listener For Cancel Button
         clearButton.addEventListener('click', () => {
 
-        
             saveButton.disabled = false;
             saveButton.style.backgroundColor = '#7580BF';
             clearButton.style.backgroundColor = 'darkgray';
             
-            localStorage.clear();
-
             emailCheckbox.checked = false;
             profileCheckbox.checked = false;
+            timeZoneDropDown.value = 0;
 
+            localStorage.clear();
         });
-
       }
-
   }
