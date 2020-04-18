@@ -310,7 +310,7 @@ profileCheckbox.addEventListener('change', () => {
 
 //Time Zone Event Listener
 timeZoneDropDown.addEventListener('change', function (event) {
-    //localStorage.setItem('timeZone', event.target.value);
+    localStorage.setItem('timeZone', event.target.value);
 })
 
 let savedEmailCheckStatus = localStorage.getItem('emailCheckbox');
@@ -321,17 +321,19 @@ let savedTimeZone = localStorage.getItem('timeZone');
       if(this.supportsLocalStorage) {
 
         //Set Email Notification
-        if(savedEmailCheckStatus === "true"){
-            emailCheckbox.checked == true;
+        if(savedEmailCheckStatus === 'true'){
+            emailCheckbox.checked = true;
         }
         
         //Set Profile Status
-        if(savedProfileCheckStatus === "true"){
-            profileCheckbox.checked == true;
+        if(savedProfileCheckStatus === 'true'){
+            profileCheckbox.checked = true;
         }
         
         //Set TimeZone Status
-           //The code will go here!
+            //if(savedTimeZone !== ""){
+
+            //}
 
 
         const saveButton = document.querySelector('#save');
@@ -343,9 +345,6 @@ let savedTimeZone = localStorage.getItem('timeZone');
             saveButton.style.backgroundColor = 'darkgray';
             clearButton.style.backgroundColor = '#7580BF';
 
-            //console.log(emailCheckStatus);    
-            //console.log(profileCheckStatus);
-            //console.log(timeZoneValue);
 
         });
 
@@ -360,6 +359,9 @@ let savedTimeZone = localStorage.getItem('timeZone');
             clearButton.style.backgroundColor = 'darkgray';
             
             localStorage.clear();
+
+            emailCheckbox.checked = false;
+            profileCheckbox.checked = false;
 
         });
 
