@@ -289,52 +289,63 @@ $(function () {
   const profileCheckbox= document.querySelector('.profile-checkbox');
   const timeZoneDropDown = document.getElementById('timezone');
 
-    var emailCheckStatus;
-    var profileCheckStatus;
-    var timeZoneValue;
-
-
-//Time Zone Event Listener
-  timeZoneDropDown.addEventListener('change', function (event) {
-    //localStorage.setItem('timeZone', event.target.value);
-    timeZoneValue = event.target.value;
-
-})
-
 
 //Email CheckBox Event Listener
 emailCheckbox.addEventListener('change', () => {
 
     if(emailCheckbox.checked == true){
-        //localStorage.setItem('emailCheckbox','true');
-        emailCheckStatus = 'true';  
+        localStorage.setItem('emailCheckbox','true');
     }
 
 });
-
 
 //Profile CheckBox Event Listener
 profileCheckbox.addEventListener('change', () => {
 
     if(profileCheckbox.checked == true){
-        //localStorage.setItem('profileCheckbox','true');
-        profileCheckStatus = 'true';
+        localStorage.setItem('profileCheckbox','true');
     }
 
 });
 
+//Time Zone Event Listener
+timeZoneDropDown.addEventListener('change', function (event) {
+    //localStorage.setItem('timeZone', event.target.value);
+})
+
+let savedEmailCheckStatus = localStorage.getItem('emailCheckbox');
+let savedProfileCheckStatus = localStorage.getItem('profileCheckbox');
+let savedTimeZone = localStorage.getItem('timeZone');
 
   window.onload = function() {
       if(this.supportsLocalStorage) {
+
+        //Set Email Notification
+        if(savedEmailCheckStatus === "true"){
+            emailCheckbox.checked == true;
+        }
+        
+        //Set Profile Status
+        if(savedProfileCheckStatus === "true"){
+            profileCheckbox.checked == true;
+        }
+        
+        //Set TimeZone Status
+           //The code will go here!
+
 
         const saveButton = document.querySelector('#save');
 
         //Event Listener For Save Button
         saveButton.addEventListener('click', () => {
 
-            console.log(emailCheckStatus);    
-            console.log(profileCheckStatus);
-            console.log(timeZoneValue);
+            saveButton.disabled = true;
+            saveButton.style.backgroundColor = 'darkgray';
+            clearButton.style.backgroundColor = '#7580BF';
+
+            //console.log(emailCheckStatus);    
+            //console.log(profileCheckStatus);
+            //console.log(timeZoneValue);
 
         });
 
@@ -343,6 +354,12 @@ profileCheckbox.addEventListener('change', () => {
         //Event Listener For Cancel Button
         clearButton.addEventListener('click', () => {
 
+        
+            saveButton.disabled = false;
+            saveButton.style.backgroundColor = '#7580BF';
+            clearButton.style.backgroundColor = 'darkgray';
+            
+            localStorage.clear();
 
         });
 
