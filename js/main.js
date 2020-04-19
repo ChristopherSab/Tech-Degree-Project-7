@@ -294,7 +294,7 @@ $(function () {
   const profileCheckbox= document.querySelector('.profile-checkbox');
   const timeZoneDropDown = document.getElementById('timezone');
 
-  //The Results From The Event Listeners Will Be Assigned To The Variables Below//
+//The Results From The Event Listeners Will Be Assigned To The Variables Below//
   let emailHasBeenChecked;
   let profileHasBeenChecked;
   let timeZoneSelectValue;
@@ -304,6 +304,8 @@ emailCheckbox.addEventListener('change', () => {
 
     if(emailCheckbox.checked == true){
         emailHasBeenChecked = true;
+    } else if(emailCheckbox.checked == false){
+        emailHasBeenChecked = false;
     }
 });
 
@@ -312,6 +314,8 @@ profileCheckbox.addEventListener('change', () => {
 
     if(profileCheckbox.checked == true){
         profileHasBeenChecked = true;
+    } else if(profileCheckbox.checked == false){
+        profileHasBeenChecked = false;
     }
 });
 
@@ -328,17 +332,14 @@ The function below has a collection of the 'SETTINGS CHANGES' made by the User.
 */
 function changesToSave(){
 
-    if(emailHasBeenChecked == true){
-        localStorage.setItem('emailCheckbox','true');
-    } 
-    if(profileHasBeenChecked == true) {
-        localStorage.setItem('profileCheckbox','true');
-    } 
+    localStorage.setItem('emailCheckbox', emailHasBeenChecked);
+
+    localStorage.setItem('profileCheckbox', profileHasBeenChecked);
+    
     if(typeof timeZoneSelectValue !== "undefined") {
         localStorage.setItem('timeZone', timeZoneSelectValue);
     }
 }
-
 
   window.onload = function() {
       if(this.supportsLocalStorage) {
@@ -351,25 +352,30 @@ function changesToSave(){
         //This Will 'Check' The Email Notification Checkbox (Only "if" This was previously Checked & Saved)
         if(savedEmailCheckStatus === 'true'){
             emailCheckbox.checked = true;
+        } else if (savedEmailCheckStatus === 'false'){
+            emailCheckbox.checked = false;
         }
-        
+
         //This Will 'Check' The Profile Checkbox (Only "if" This was previously Checked & Saved)
         if(savedProfileCheckStatus === 'true'){
             profileCheckbox.checked = true;
+        } else if(savedProfileCheckStatus === 'false'){
+            profileCheckbox.checked = false;
         }
         
         //This Will Set TimeZone Option (Only "if" This was previously selected & Saved)
         if(savedTimeZone !== null) {
            timeZoneDropDown.value = savedTimeZone;
+           console.log(savedTimeZone);
         }
 
         const saveButton = document.querySelector('#save');
 
         //Event Listener For Save Button
         saveButton.addEventListener('click', () => {
-            
+    
             changesToSave();
-            
+
         });
 
         const clearButton = document.querySelector('#cancel');
