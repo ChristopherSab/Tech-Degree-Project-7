@@ -369,7 +369,6 @@ function changesToSave(){
         saveButton.addEventListener('click', () => {
             
             changesToSave();
-            saveButton.disabled = true;
             saveButton.style.backgroundColor = 'darkgray';
             clearButton.style.backgroundColor = '#7580BF';
         });
@@ -379,7 +378,6 @@ function changesToSave(){
         //Event Listener For Cancel Button
         clearButton.addEventListener('click', () => {
 
-            saveButton.disabled = false;
             saveButton.style.backgroundColor = '#7580BF';
             clearButton.style.backgroundColor = 'darkgray';
             
