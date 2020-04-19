@@ -210,7 +210,7 @@ html {
     }
 
     .cancel:hover {
-        background-color:lightcoral;
+        background-color: lightcoral;
         border-radius: 5px;
         color: white;
     }
@@ -452,6 +452,16 @@ html {
           border: none;
           border-radius: 5px;
           color: white;
+      }
+
+      #save:hover {
+          background-color: var(--color-secondary);
+          transform: scale(1.02);
+      }
+
+      #cancel:hover {
+          background-color: #ff4c4c;
+          transform: scale(1.02);
       }
 
       .switch-ios {

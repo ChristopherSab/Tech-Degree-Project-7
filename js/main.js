@@ -369,17 +369,13 @@ function changesToSave(){
         saveButton.addEventListener('click', () => {
             
             changesToSave();
-            saveButton.style.backgroundColor = 'darkgray';
-            clearButton.style.backgroundColor = '#7580BF';
+            
         });
 
         const clearButton = document.querySelector('#cancel');
 
         //Event Listener For Cancel Button
         clearButton.addEventListener('click', () => {
-
-            saveButton.style.backgroundColor = '#7580BF';
-            clearButton.style.backgroundColor = 'darkgray';
             
             emailCheckbox.checked = false;
             profileCheckbox.checked = false;
