@@ -276,8 +276,10 @@ html {
         font-size:  1rem;
         font-weight: bold;
         color: #696969;
+        cursor: pointer;
     }
 
+    .active,
     .traffic-nav-link:hover {
         background-color: #7EBF88;
         border-radius: 20px;
@@ -693,6 +695,11 @@ html {
 
         .main-container {
             margin: auto; 
+        }
+
+        .section-title {
+            text-align: left;
+            padding-left: 2rem;
         }
 
         .notifications ul {

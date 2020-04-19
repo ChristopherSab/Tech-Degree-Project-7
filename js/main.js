@@ -62,6 +62,19 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
+/* TRAFFIC CHART - CHART OPTIONS*/
+
+// This Adds Active Class (Light Green Background) To The Current/Selected Element i.e Hour, Monthly etc
+var navList = document.getElementsByClassName("traffic-nav")[0];
+var navItem = navList.getElementsByClassName("traffic-nav-link");
+for (var i = 0; i < navItem.length; i++) {
+    navItem[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
 /* TRAFFIC DATA LINE CHART SECTION*/
 let trafficChart = document.getElementById("traffic-chart").getContext('2d');
 
@@ -98,8 +111,8 @@ let cityTrafficData = new Chart(trafficChart, {
 
     options: {
 
-        responsive: true,
-        maintainAspectRatio: false,
+        responsive: true, 
+        maintainAspectRatio: false, 
          
         legend: {
             display: false
@@ -107,7 +120,7 @@ let cityTrafficData = new Chart(trafficChart, {
 
         scales: {
             yAxes: [{
-                stacked: true
+                stacked: false 
             }]
         }
     }
