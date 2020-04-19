@@ -226,6 +226,7 @@ html {
 
     .headline {
         padding: 0 1rem;
+        text-align: center;
     }
 
     .headline-search-box{
@@ -496,12 +497,13 @@ html {
 
             .headline {
                 flex-grow: 1;
+                text-align: unset;
             }
 
             .search {
                 border-radius: 7px;
                 margin-right: 5rem;
-                padding: 0;
+                padding: .5rem;
             }
 
             .header{

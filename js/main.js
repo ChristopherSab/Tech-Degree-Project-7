@@ -15,9 +15,9 @@ notificationBell.addEventListener ('click', () => {
     notificationList.innerHTML =
 `
 <ul>
-    <li class="notification-item">You Have 1 Unread Message   <span class="cancel">X</span> </li>
-    <li class="notification-item">You Have 7 New Followers   <span class="cancel">X</span> </li>
-    <li class="notification-item">Your Trial Expires In 2 Days   <span class="cancel">X</span> </li>
+    <li class="notification-item">Monica Added You   <span class="cancel">X</span> </li>
+    <li class="notification-item">Review New Features   <span class="cancel">X</span> </li>
+    <li class="notification-item">Free Trial Expiring Soon   <span class="cancel">X</span> </li>
 </ul>
 `;
 
