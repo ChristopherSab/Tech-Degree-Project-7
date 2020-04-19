@@ -221,24 +221,23 @@ html {
 
     .main-headline {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .headline {
-        flex-grow: 1;
         padding: 0 1rem;
     }
 
     .headline-search-box{
-        flex-grow: 4;
         background-color: #DFE2F2;
-        padding: .5rem 0 .5rem 1rem;
+        padding: 1rem;             
         border-bottom-left-radius: 5px;
     }
 
     .search {
         border-radius: 7px;
-        padding-right: 10rem;
+        width: 100%;
+        padding: 1rem;
     }
 
     /*----------------*/
@@ -486,6 +485,23 @@ html {
             .headline-search-box {
                 display: flex;
                 flex-direction: row;
+                flex-grow: 4;
+                padding: .5rem 0 .5rem 1rem;
+            }
+
+            .main-headline {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .headline {
+                flex-grow: 1;
+            }
+
+            .search {
+                border-radius: 7px;
+                margin-right: 5rem;
+                padding: 0;
             }
 
             .header{
