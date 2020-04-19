@@ -385,9 +385,9 @@ function changesToSave(){
             
             emailCheckbox.checked = false;
             profileCheckbox.checked = false;
-            timeZoneDropDown.value = 0;
+            timeZoneDropDown.value = 0;  
 
             localStorage.clear();
         });
       }
-  }
+  }   
