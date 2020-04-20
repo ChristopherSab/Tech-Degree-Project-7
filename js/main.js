@@ -1,10 +1,8 @@
 
 
 /* NOTIFICATIONS [SECTION] AFTER A USERS CLICKS BELL ICON */
-
 const notificationBell = document.getElementsByClassName('bell-icon')[0];
 const notificationList = document.getElementsByClassName('notifications')[0];
-
 
 notificationBell.addEventListener ('click', () => {
 
@@ -37,12 +35,9 @@ notificationBell.addEventListener ('click', () => {
                     ul.style.display = "none";
                   }
             } 
-
         });
-
     });
 });
-
 
 /* ALERT BUTTON SECTION*/
 const alertBanner = document.getElementById("alert");
@@ -77,7 +72,6 @@ for (var i = 0; i < navItem.length; i++) {
 
 /* TRAFFIC DATA LINE CHART SECTION*/
 let trafficChart = document.getElementById("traffic-chart").getContext('2d');
-
 
 let cityTrafficData = new Chart(trafficChart, {
     type: 'line', 
@@ -124,7 +118,6 @@ let cityTrafficData = new Chart(trafficChart, {
             }]
         }
     }
-
 });
 
 // Hourly  Data Update
@@ -169,9 +162,7 @@ monthlyData.addEventListener('click', () => {
 
 
 /* DAILY TRAFFIC BAR CHART */
-
 let dailyTrafficData = document.getElementById("daily-chart").getContext('2d');
-
 
 let dailyChart = new Chart(dailyTrafficData, {
     type: 'bar', 
@@ -204,11 +195,9 @@ let dailyChart = new Chart(dailyTrafficData, {
             display: false
         },
     }
-
 });
 
 /* MOBILE USERS DOUGHNUT CHART SECTION */
-
 let mobileData = document.getElementById("doughnut-chart").getContext('2d');
 
 let mobileDataChart = new Chart(mobileData, {
@@ -241,14 +230,10 @@ let mobileDataChart = new Chart(mobileData, {
                 fontStyle: 'bold'
                 } 
         },    
-
     }
-
 });
 
-
 /* MESSAGING SECTION */
-
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
@@ -326,14 +311,14 @@ function changesToSave(){
         let savedProfileCheckStatus = localStorage.getItem('profileCheckbox');
         let savedTimeZone = localStorage.getItem('timeZone');
 
-        //This Will 'Check' The Email Notification Checkbox (Only "if" This was previously Checked & Saved)
+        //This Will Set The Email Toggle Switch To True/False (Depending What Was Previously Saved)
         if(savedEmailCheckStatus === 'true'){
             emailCheckbox.checked = true;
         } else if (savedEmailCheckStatus === 'false'){
             emailCheckbox.checked = false;
         }
 
-        //This Will 'Check' The Profile Checkbox (Only "if" This was previously Checked & Saved)
+        //This Will Set The Profile Toggle Switch To True/False (Depending What Was Previously Saved)
         if(savedProfileCheckStatus === 'true'){
             profileCheckbox.checked = true;
         } else if(savedProfileCheckStatus === 'false'){
@@ -350,9 +335,8 @@ function changesToSave(){
 
         //Event Listener For Save Button
         saveButton.addEventListener('click', () => {
-    
-            changesToSave();
 
+            changesToSave();
         });
 
         const clearButton = document.querySelector('#cancel');
@@ -363,7 +347,6 @@ function changesToSave(){
             emailCheckbox.checked = false;
             profileCheckbox.checked = false;
             timeZoneDropDown.value = 0;  
-
             localStorage.clear();
         });
       }
