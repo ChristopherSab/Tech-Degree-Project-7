@@ -294,36 +294,13 @@ $(function () {
   const profileCheckbox= document.querySelector('.profile-checkbox');
   const timeZoneDropDown = document.getElementById('timezone');
 
-//The Results From The Event Listeners Will Be Assigned To The Variables Below//
-  let emailHasBeenChecked;
-  let profileHasBeenChecked;
-  let timeZoneSelectValue;
-
-//Email CheckBox Event Listener//
-emailCheckbox.addEventListener('change', () => {
-
-    if(emailCheckbox.checked == true){
-        emailHasBeenChecked = true;
-    } else if(emailCheckbox.checked == false){
-        emailHasBeenChecked = false;
-    }
-});
-
-//Profile CheckBox Event Listener//
-profileCheckbox.addEventListener('change', () => {
-
-    if(profileCheckbox.checked == true){
-        profileHasBeenChecked = true;
-    } else if(profileCheckbox.checked == false){
-        profileHasBeenChecked = false;
-    }
-});
+//Variable Below Will Have Value of TimeZone Drop Down Option//
+let timeZoneSelectValue;
 
 //Time Zone Event Listener//
 timeZoneDropDown.addEventListener('input', function (event) {
 
-    let selectedTimeZone = event.target.value;
-    timeZoneSelectValue = selectedTimeZone;
+    timeZoneSelectValue = event.target.value;
 })
 
 /*
@@ -332,9 +309,9 @@ The function below has a collection of the 'SETTINGS CHANGES' made by the User.
 */
 function changesToSave(){
 
-    localStorage.setItem('emailCheckbox', emailHasBeenChecked);
+    localStorage.setItem('emailCheckbox', emailCheckbox.checked);
 
-    localStorage.setItem('profileCheckbox', profileHasBeenChecked);
+    localStorage.setItem('profileCheckbox', profileCheckbox.checked);
     
     if(typeof timeZoneSelectValue !== "undefined") {
         localStorage.setItem('timeZone', timeZoneSelectValue);
