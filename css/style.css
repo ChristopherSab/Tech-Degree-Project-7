@@ -211,10 +211,12 @@ html {
         padding: 0.2rem 1.7rem;
     }
 
-    .cancel:hover {
+    .cancel:hover,
+    .cancel:focus {
         background-color: lightcoral;
         border-radius: 5px;
         color: white;
+        cursor: pointer;
     }
 
     /*----------------*/
@@ -261,6 +263,11 @@ html {
         color: white;
         font-weight: bolder;
         padding: .5rem;
+    }
+
+    .alert-banner-close:hover,
+    .alert-banner-close:focus{
+        cursor: pointer;
     }
 
     /*-------------------*/
